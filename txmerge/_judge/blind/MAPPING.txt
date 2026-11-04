@@ -1,0 +1,5 @@
+X=egm
+Y=superpowers
+Z=baseline
+design_P=egm
+design_Q=superpowers

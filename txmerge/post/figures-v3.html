@@ -1,0 +1,364 @@
+<!doctype html><html lang='en-GB'><head><meta charset='utf-8'>
+<style>
+html.export, html.export body { background: #ffffff; }
+html.export body { padding: 0; height: 390px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+html.export main { max-width: none; width: 680px; }
+html.export main > * { display: none !important; }
+html.export main > figure.target { display: block !important; margin: 0; width: 680px; }
+html.export table th, html.export table td { padding-top: 3px; padding-bottom: 3px; font-size: 12.5px; }
+html.export .fig-head, html.export figcaption, html.export .legend { max-width: none; }
+html.export .quote-grid { gap: 12px; grid-template-columns: repeat(4, minmax(0, 1fr)); } html.export .qhead { font-size: 13px; } html.export .row { font-size: 11px; padding: 6px 8px; } html.export .verdict { font-size: 12px; }
+html.export .fig-head { margin-bottom: 10px; } html.export .probe { gap: 10px 12px; } html.export .pres, html.export .pcase { font-size: 13px; } html.export .pres .sub, html.export .pcase .sub { font-size: 11.5px; }
+</style>
+<script>
+document.documentElement.setAttribute('data-theme','light');
+document.documentElement.classList.add('export');
+window.addEventListener('DOMContentLoaded', () => {
+  const id = location.hash.slice(1);
+  document.querySelectorAll('main > figure').forEach(f => { if (f.getAttribute('aria-labelledby') === id) f.classList.add('target'); });
+});
+</script>
+</head><body><title>Three Ways to Build the Same Tool</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one 680px reading column; figures break out to 820px; space, not rules, separates sections. */
+:root {
+  --bg: #ffffff;
+  --ink: #18181b;
+  --ink-2: rgb(0 0 0 / 68%);
+  --ink-3: rgb(0 0 0 / 56%);
+  --rule: #e4e4e7;
+  --tint: rgb(0 0 0 / 4%);
+  --accent: #1d4ed8;
+  --a-base: #71717a;   /* baseline: neutral, it is the control */
+  --a-sp: #eb6834;     /* superpowers */
+  --a-egm: #1baf7a;    /* egm */
+  --bad: #b42318;
+  --good: #067647;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141416; --ink: #f4f4f5; --ink-2: rgb(255 255 255 / 72%); --ink-3: rgb(255 255 255 / 60%);
+    --rule: #2e2e33; --tint: rgb(255 255 255 / 5%); --accent: #7aa2ff;
+    --a-base: #8e8e96; --a-sp: #d95926; --a-egm: #199e70; --bad: #f97066; --good: #47cd89;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141416; --ink: #f4f4f5; --ink-2: rgb(255 255 255 / 72%); --ink-3: rgb(255 255 255 / 60%);
+  --rule: #2e2e33; --tint: rgb(255 255 255 / 5%); --accent: #7aa2ff;
+  --a-base: #8e8e96; --a-sp: #d95926; --a-egm: #199e70; --bad: #f97066; --good: #47cd89;
+  color-scheme: dark;
+}
+html { font-size: 17px; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font);
+  font-size: 1rem; line-height: 1.65; font-weight: 400;
+  padding-block: 64px 96px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+main { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; }
+.label {
+  font-family: var(--mono); font-size: 0.71rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3); line-height: 1.4;
+}
+h1 { font-size: 2.6rem; line-height: 1.08; letter-spacing: -0.02em; font-weight: 600; margin: 16px 0 0; text-wrap: balance; }
+.dek { font-size: 1.18rem; color: var(--ink-2); margin: 24px 0 0; line-height: 1.5; }
+h2 { font-size: 1.41rem; line-height: 1.2; letter-spacing: -0.01em; font-weight: 600; margin: 72px 0 16px; text-wrap: balance; }
+p { margin: 0 0 18px; }
+p a, li a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+ul.points { margin: 0 0 18px; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+strong { font-weight: 600; }
+code { font-family: var(--mono); font-size: 0.88em; background: var(--tint); padding: 1px 5px; border-radius: 4px; }
+
+figure { margin: 40px 0 48px; width: min(820px, calc(100vw - 32px)); align-self: center; }
+figcaption { margin-top: 14px; font-size: 0.82rem; color: var(--ink-3); line-height: 1.5; max-width: 680px; margin-inline: auto; }
+.fig-head { max-width: 680px; margin: 0 auto 18px; display: flex; flex-direction: column; gap: 4px; }
+.fig-title { font-size: 1rem; font-weight: 600; }
+
+/* Scoreboard */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 0.88rem; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 10px 12px; vertical-align: top; }
+thead th { font-family: var(--mono); font-size: 0.71rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); font-weight: 400; border-bottom: 1px solid var(--rule); }
+tbody th { font-weight: 400; color: var(--ink-2); }
+tbody tr + tr td, tbody tr + tr th { border-top: 1px solid var(--tint); }
+.arm { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.dot { width: 10px; height: 10px; border-radius: 4px; flex: none; }
+.ok { color: var(--good); } .no { color: var(--bad); } .meh { color: var(--ink-2); }
+
+/* Quote diagram */
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 24px; max-width: 820px; }
+.qcol { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.qhead { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.94rem; margin-bottom: 6px; }
+.row {
+  font-family: var(--mono); font-size: 0.74rem; padding: 7px 10px; border-radius: 4px;
+  background: var(--tint); color: var(--ink); overflow-wrap: anywhere; line-height: 1.4;
+}
+.row.lost { color: var(--ink-3); text-decoration: line-through; background: transparent; outline: 1px dashed var(--rule); }
+.row.broken { color: var(--bad); }
+.verdict { font-size: 0.82rem; margin-top: 8px; line-height: 1.45; }
+
+/* Probe matrix */
+.probe { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; gap: 14px 16px; align-items: start; }
+.probe .qhead { margin-bottom: 0; }
+.pcase, .pres { display: flex; flex-direction: column; gap: 6px; min-width: 0; font-size: 0.88rem; line-height: 1.4; }
+.pcase { padding-top: 14px; }
+.pres { padding-top: 14px; font-weight: 600; }
+.pres .sub, .pcase .sub { font-weight: 400; color: var(--ink-2); font-size: 0.8rem; }
+.probe .row { align-self: flex-start; }
+/* Charts */
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart text { fill: var(--ink-3); font-family: var(--font); font-size: 12px; }
+.chart .val { fill: var(--ink); font-variant-numeric: tabular-nums; }
+.chart .arm-label { fill: var(--ink); font-weight: 600; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .axis { stroke: var(--ink-3); stroke-width: 1; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.82rem; color: var(--ink-2); max-width: 680px; margin: 0 auto 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.tip {
+  position: absolute; pointer-events: none; background: var(--bg); color: var(--ink);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 8px 10px; font-size: 0.78rem;
+  line-height: 1.45; font-variant-numeric: tabular-nums; white-space: nowrap; z-index: 2;
+}
+.hit { fill: transparent; cursor: default; }
+.hit:focus-visible { outline: none; stroke: var(--accent); stroke-width: 2; }
+
+.byline { margin-top: 72px; font-size: 0.82rem; color: var(--ink-3); }
+@media (max-width: 520px) {
+  h1 { font-size: 2.05rem; }
+  h2 { margin-top: 56px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<main>
+  <span class="label">Experiment · 2 Nov 2026 · Claude Code</span>
+  <h1>Three ways to build the same tool</h1>
+  <p class="dek">I gave Google's Elephant-Goldfish Model, Superpowers and a plain agent the same brief. All three passed the tests. The differences were in what the tests didn't check, and in the bill.</p>
+
+  <h2>The setup</h2>
+  <p>We keep wrapping more process around coding agents - brainstorms, written plans, reviewer swarms - and the return on that overhead is still mostly anecdotal. I wanted a number, so I ran <a href="https://github.com/google/elephant-goldfish-model">EGM</a> and Superpowers against a plain agent with no plugin, in parallel in Claude Code, on the same model, building the same thing: txmerge, a small Python CLI that merges overlapping bank CSV exports into one ledger. It has to remove duplicates without losing real transactions, link transfers between my own accounts and categorise the rest with rules.</p>
+  <p>The brief was deliberately loose. A scripted stakeholder agent held 13 hidden policies - two identical coffees on the same day in one export are both real, a transfer must land within 3 days - and only answered what it was asked. I scored the arms on 18 hidden acceptance tests, a 10-case robustness probe, blind code and design reviews, and token spend rebuilt from every agent's transcript.</p>
+  <ul class="points">
+    <li><strong>EGM</strong> has a deep-context "elephant" agent draft a design spec, then sends it to zero-context "goldfish" reviewers before any code is written.</li>
+    <li><strong>Superpowers</strong> goes from brainstorm to written plan to subagent-driven development, with test-driven development and review on each task.</li>
+    <li><strong>Baseline</strong> is the agent on its own.</li>
+  </ul>
+
+  <h2>Everyone passed the tests</h2>
+  <p>All three arms scored 18/18. The baseline asked 14 questions in a single batch and got every policy, which tells me the brief was too easy to separate the workflows on rule-following.</p>
+  <p>The difference showed up in the brief's own first requirement: never lose a real transaction. I fed each tool a CSV where one row had an unclosed quote and two valid rows followed it.</p>
+
+  <figure aria-labelledby="q-title">
+    <div class="fig-head">
+      <span class="label">Robustness probes</span>
+      <span class="fig-title" id="q-title">Two ways to lose data nobody specified</span>
+    </div>
+    <div class="probe">
+      <div></div>
+      <div class="qhead"><span class="dot" style="background:var(--a-base)"></span>Baseline</div>
+      <div class="qhead"><span class="dot" style="background:var(--a-sp)"></span>Superpowers</div>
+      <div class="qhead"><span class="dot" style="background:var(--a-egm)"></span>EGM</div>
+      <div class="pcase"><strong>Unclosed quote</strong><span class="row broken">01/03,"Broken,3.50,,0</span><span class="sub">then two valid rows</span></div>
+      <div class="pres"><span class="no">✕ Keeps 0 of 2</span><span class="sub">Exit 0, one warning. Two real transactions vanish.</span></div>
+      <div class="pres"><span class="ok">✓ Keeps 2 of 2</span><span class="sub">Caught by its final whole-branch review.</span></div>
+      <div class="pres"><span class="no">✕ Keeps 0 of 2</span><span class="sub">Exit 0. Summary says "1 rows read".</span></div>
+      <div class="pcase"><strong>Output points at an input</strong><span class="row">--out bank.csv</span><span class="sub">where bank.csv is also an input</span></div>
+      <div class="pres"><span class="no">✕ Overwrites it</span><span class="sub">Your bank export is replaced by the ledger.</span></div>
+      <div class="pres"><span class="no">✕ Overwrites it</span><span class="sub">Same, no warning.</span></div>
+      <div class="pres"><span class="ok">✓ Refuses, exit 2</span><span class="sub">Its design process asked about this case.</span></div>
+    </div>
+  </figure>
+
+  <p>Superpowers' 6 per-task reviews had all passed first time; the one bug that mattered came from its single review of the whole branch at the end. In the blind code review, EGM and Superpowers tied on 16/20, with EGM ahead on correctness, and the baseline came third on 11/20. EGM's design scored 20/25 against Superpowers' 16/25, and it uncovered 11 of the 13 policies, against 10 for Superpowers and 9 for the baseline. But the spec ran to about 580 lines for a tool of about 450.</p>
+
+  <figure aria-labelledby="s-title">
+    <div class="fig-head">
+      <span class="label">Scoreboard</span>
+      <span class="fig-title" id="s-title">Same tests passed, very different bills</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-base)"></span>Baseline</span></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-sp)"></span>Superpowers</span></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-egm)"></span>EGM</span></th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Hidden tests</th><td>18/18</td><td>18/18</td><td>18/18</td></tr>
+          <tr><th scope="row">Unclosed quote</th><td class="no">✕ loses rows</td><td class="ok">✓ keeps rows</td><td class="no">✕ loses rows</td></tr>
+          <tr><th scope="row">--out points at an input</th><td class="no">✕ overwrites</td><td class="no">✕ overwrites</td><td class="ok">✓ refuses</td></tr>
+          <tr><th scope="row">Blind code review</th><td>12/20</td><td>18/20</td><td>15/20</td></tr>
+          <tr><th scope="row">Blind design review</th><td>-</td><td>17/25</td><td>21/25</td></tr>
+          <tr><th scope="row">Hidden policies found</th><td>9 of 13</td><td>10 of 13</td><td>11 of 13</td></tr>
+          <tr><th scope="row">Active time</th><td>5 min</td><td>28 min</td><td>~100 min</td></tr>
+          <tr><th scope="row">Tokens processed</th><td>0.85M</td><td>17.6M</td><td>33.6M</td></tr>
+          <tr><th scope="row">Cost per run</th><td>$0.71</td><td>$6.46</td><td>$31</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
+
+  <h2>The orchestrator is the bill</h2>
+  <p>The baseline processed 0.85M tokens in 5 minutes, Superpowers 17.6M in 28 minutes and EGM 47.5M in 71 minutes. Weighted by what each kind of token costs, that is 1×, 15× and 36×.</p>
+  <p>The subagents were not the expensive part. 93% of EGM's tokens and 74% of Superpowers' went on the orchestrator - the main agent that dispatches all the others - re-reading its own growing context on every call. EGM's 39 reviewer runs cost about 2M tokens, but pasting their 46 reports back into the orchestrator pushed its context to 458k. Neither EGM review loop converged either; both stopped at the 5-round cap, with the style reviewer finding fresh wording issues every round.</p>
+
+
+  <figure aria-labelledby="r-title">
+    <div class="fig-head">
+      <span class="label">Three problems</span>
+      <span class="fig-title" id="r-title">txmerge · stockmerge · tsinvoice</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-base)"></span>Baseline</span></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-sp)"></span>Superpowers</span></th><th scope="col"><span class="arm"><span class="dot" style="background:var(--a-egm)"></span>EGM</span></th></tr></thead>
+        <tbody><tr><th scope="row">Hidden tests (/18)</th><td>18 · 17 · 18</td><td>18 · 17 · 18</td><td>18 · 18† · 18</td></tr><tr><th scope="row">Blind code review rank</th><td>3 · 3 · 3</td><td><strong>1 · 1 · 1</strong></td><td>2 · 2 · 2</td></tr><tr><th scope="row">Blind design review (/25)</th><td>-</td><td>17 · 16 · 18</td><td><strong>21 · 20 · 21</strong></td></tr><tr><th scope="row">Data-loss probes passed</th><td>0 of 6</td><td>2 of 6</td><td>3 of 6</td></tr><tr><th scope="row">Cost per run</th><td>$0.71 · $0.94 · $1.15</td><td>$6.46 · $7.15 · $8.62</td><td>$31 · $32 · $25</td></tr><tr><th scope="row">Active minutes</th><td>5 · 4 · 5</td><td>28 · 32 · 39</td><td>~100 · 114 · 77</td></tr></tbody>
+      </table>
+    </div>
+    <figcaption>Each cell reads txmerge · stockmerge · tsinvoice. † The stakeholder volunteered the one rule EGM was missing; on merit all three arms missed it.</figcaption>
+  </figure>
+  <figure aria-labelledby="t-title">
+    <div class="fig-head">
+      <span class="label">Tokens processed, all agents</span>
+      <span class="fig-title" id="t-title">Most of the spend is the orchestrator re-reading itself</span>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><span class="dot" style="background:var(--ink-2)"></span>Orchestrator</span>
+      <span><span class="dot" style="background:var(--ink-2);opacity:.35"></span>Subagents</span>
+    </div>
+    <div class="chart" id="tokens"></div>
+    <figcaption>Millions of tokens processed, summed from per-call usage in every agent's transcript. Cache reads are 87-94% of every arm's tokens.</figcaption>
+  </figure>
+
+  <figure aria-labelledby="c-title">
+    <div class="fig-head">
+      <span class="label">Orchestrator context over time</span>
+      <span class="fig-title" id="c-title">Every call re-reads everything before it</span>
+    </div>
+    <div class="chart" id="context"></div>
+    <figcaption>Thousands of tokens in the orchestrator's context at each API call, by active minutes (a laptop sleep mid-run is cut out). Each one starts near 40k: system prompt, tools and project instructions.</figcaption>
+  </figure>
+
+  <p>It hasn't been without adventure. The <code>subagent_tokens</code> figure Claude Code reports turned out to be the final context size, not total spend, so my first report understated cost by 7 to 21 times. I rebuilt every number from the transcripts.</p>
+
+  <h2>Same workflow, opposite answer</h2>
+  <p>I then reran EGM with its synthesizer agent, which keeps reviewer reports out of the orchestrator. Tokens fell 29%, from 47.5M to 33.6M, but weighted cost rose 21%, because the longer waits let the prompt cache expire and the orchestrator rewrote its ~260k context 6 times.</p>
+  <p>And this run silently lost the rows on the unclosed quote that run 1 had refused. Same workflow, same brief, opposite behaviour. Run-to-run variance was as large as the gap between workflows, so one run per arm proves less than I would like.</p>
+
+  <h2>What I'd take from it</h2>
+  <ul class="points">
+    <li><strong>Process bought robustness, not rule-following.</strong> Both plugins caught a data-loss bug the plain agent shipped.</li>
+    <li><strong>The orchestrator's context is the bill.</strong> Multi-agent workflows should hand reports over on disk and start a fresh context for each phase.</li>
+    <li><strong>One run is an anecdote.</strong> Next time I'll run three per arm.</li>
+  </ul>
+  <p>The caveats are real: one task, one model, and a scripted stakeholder instead of a human at the gates. But the cheapest likely win is already visible - a plain agent plus one whole-branch review at the end - and that is the experiment I want to run next. If you have tried something similar, I'd love to compare notes.</p>
+
+  <p class="byline">Mashhood Rastgar · Run on 2 November 2026 with Claude Code, EGM 0.1.0 and Superpowers 6.4.1.</p>
+</main>
+
+<script>
+(() => {
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (tag, attrs = {}, parent) => {
+    const n = document.createElementNS(NS, tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    if (parent) parent.appendChild(n);
+    return n;
+  };
+  const tipFor = (host) => {
+    const t = document.createElement("div"); t.className = "tip"; t.hidden = true; host.appendChild(t);
+    return {
+      show(html, x, y) {
+        t.innerHTML = html; t.hidden = false;
+        const w = host.clientWidth, tw = t.offsetWidth;
+        t.style.left = Math.max(0, Math.min(w - tw, x + 12)) + "px";
+        t.style.top = Math.max(0, y - t.offsetHeight - 10) + "px";
+      },
+      hide() { t.hidden = true; }
+    };
+  };
+
+  /* Chart 1: stacked horizontal bars, orchestrator vs subagents (millions processed). */
+  const arms = [
+    { name: "Baseline", color: "var(--a-base)", orch: 0.76, sub: 0.09, note: "1 subagent" },
+    { name: "Superpowers", color: "var(--a-sp)", orch: 12.95, sub: 4.66, note: "22 subagents" },
+    { name: "EGM", color: "var(--a-egm)", orch: 25.36, sub: 8.25, note: "66 subagents" },
+  ];
+  {
+    const host = document.getElementById("tokens"), tip = tipFor(host);
+    const W = 820, L = 190, R = 70, rowH = 46, barH = 20, top = 8, H = top + arms.length * rowH + 30;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Tokens processed by arm, split into orchestrator and subagents" }, host);
+    const max = 40, x = v => L + (v / max) * (W - L - R);
+    for (const t of [0, 10, 20, 30, 40]) {
+      el("line", { x1: x(t), x2: x(t), y1: top - 4, y2: H - 26, class: "grid" }, svg);
+      el("text", { x: x(t), y: H - 8, "text-anchor": "middle" }, svg).textContent = t + "M";
+    }
+    arms.forEach((a, i) => {
+      const y = top + i * rowH + (rowH - barH) / 2;
+      el("text", { x: L - 12, y: y + barH / 2 + 4, "text-anchor": "end", class: "arm-label" }, svg).textContent = a.name;
+      const wO = x(a.orch) - L, wS = x(a.orch + a.sub) - x(a.orch);
+      el("rect", { x: L, y, width: Math.max(wO, 1), height: barH, rx: 4, fill: a.color }, svg);
+      el("rect", { x: x(a.orch) + 2, y, width: Math.max(wS - 2, 1), height: barH, rx: 4, fill: a.color, "fill-opacity": 0.35 }, svg);
+      const tot = a.orch + a.sub;
+      el("text", { x: x(tot) + 8, y: y + barH / 2 + 4, class: "val" }, svg).textContent = tot.toFixed(tot < 1 ? 2 : 1) + "M";
+      const hit = el("rect", { x: L - 180, y: y - 10, width: W - L + 180, height: barH + 20, class: "hit", tabindex: 0,
+        "aria-label": `${a.name}: ${tot.toFixed(2)} million tokens, orchestrator ${Math.round(a.orch / tot * 100)} percent` }, svg);
+      const html = `<strong>${a.name}</strong><br>Total ${tot.toFixed(2)}M · ${a.note}<br>Orchestrator ${a.orch.toFixed(2)}M (${Math.round(a.orch / tot * 100)}%)<br>Subagents ${a.sub.toFixed(2)}M`;
+      const show = () => { const b = hit.getBoundingClientRect(), h = host.getBoundingClientRect(); tip.show(html, Math.min(x(tot) / W * h.width, h.width - 10), b.top - h.top + 8); };
+      hit.addEventListener("mouseenter", show); hit.addEventListener("focus", show);
+      hit.addEventListener("mouseleave", tip.hide); hit.addEventListener("blur", tip.hide);
+    });
+  }
+
+  /* Chart 2: orchestrator context (k tokens) vs minutes from start. */
+  const series = [
+    { name: "EGM", color: "var(--a-egm)", pts: [[0,40],[1,82],[4,108],[6,125],[9,155],[17,181],[19,197],[26,218],[40,233],[48,247],[59,263],[68,279],[86,294],[99,302]] },
+    { name: "Superpowers", color: "var(--a-sp)", pts: [[0,40],[1,56],[2,64],[7,101],[9,126],[11,136],[13,145],[14,154],[17,164],[19,177],[24,194],[28,203]] },
+    { name: "Baseline", color: "var(--a-base)", pts: [[0,40],[1,48],[2,52],[3,62],[5,65]] },
+  ];
+  {
+    const host = document.getElementById("context"), tip = tipFor(host);
+    const W = 820, H = 300, L = 48, R = 110, T = 12, B = 34;
+    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Orchestrator context size over time for each arm" }, host);
+    const x = m => L + (m / 105) * (W - L - R), y = k => H - B - (k / 400) * (H - T - B);
+    for (const k of [0, 100, 200, 300, 400]) {
+      el("line", { x1: L, x2: W - R, y1: y(k), y2: y(k), class: k ? "grid" : "axis" }, svg);
+      el("text", { x: L - 8, y: y(k) + 4, "text-anchor": "end" }, svg).textContent = k + "k";
+    }
+    for (const m of [0, 25, 50, 75, 100]) el("text", { x: x(m), y: H - 10, "text-anchor": "middle" }, svg).textContent = m + " min";
+    const ends = [];
+    for (const s of series) {
+      el("polyline", { points: s.pts.map(([m, k]) => `${x(m)},${y(k)}`).join(" "), fill: "none", stroke: s.color, "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+      const [m, k] = s.pts[s.pts.length - 1];
+      el("circle", { cx: x(m), cy: y(k), r: 4, fill: s.color, stroke: "var(--bg)", "stroke-width": 2 }, svg);
+      ends.push({ s, m, k });
+    }
+    for (const { s, m, k } of ends) {
+      const lx = x(m) + 10, ly = y(k) + 4;
+      const t = el("text", { x: lx, y: ly, class: "arm-label" }, svg); t.textContent = s.name;
+      el("text", { x: lx, y: ly + 15, class: "val" }, svg).textContent = `${k}k at ${m === 99 ? "~100" : m} min`;
+    }
+    const cross = el("line", { y1: T, y2: H - B, class: "axis", "stroke-dasharray": "3 3", visibility: "hidden" }, svg);
+    const hit = el("rect", { x: L, y: T, width: W - L - R, height: H - T - B, class: "hit", tabindex: 0, "aria-label": "Context chart. EGM reaches 458k at 71 minutes, Superpowers 203k at 28 minutes, baseline 65k at 5 minutes." }, svg);
+    const at = (pts, m) => {
+      if (m > pts[pts.length - 1][0]) return null;
+      for (let i = 1; i < pts.length; i++) if (m <= pts[i][0]) {
+        const [m0, k0] = pts[i - 1], [m1, k1] = pts[i];
+        return Math.round(k0 + (k1 - k0) * ((m - m0) / (m1 - m0 || 1)));
+      }
+      return pts[0][1];
+    };
+    hit.addEventListener("mousemove", e => {
+      const r = svg.getBoundingClientRect(), sx = (e.clientX - r.left) * (W / r.width);
+      const m = Math.max(0, Math.min(75, ((sx - L) / (W - L - R)) * 75));
+      cross.setAttribute("x1", x(m)); cross.setAttribute("x2", x(m)); cross.setAttribute("visibility", "visible");
+      const rows = series.map(s => { const k = at(s.pts, m); return k == null ? `${s.name}: finished` : `${s.name}: ${k}k`; });
+      tip.show(`<strong>${Math.round(m)} min</strong><br>${rows.join("<br>")}`, e.clientX - r.left, e.clientY - r.top);
+    });
+    hit.addEventListener("mouseleave", () => { cross.setAttribute("visibility", "hidden"); tip.hide(); });
+  }
+})();
+</script>
+</body></html>

@@ -1,0 +1,3 @@
+# Stage 9 R1 egm-style (completed): 0 Blocker, 6 Major, 13 Nit
+M1 L385 empty-header message includes prefix (double prefix); M2 L386 date regexes use \d and contradict [0-9] rule; pairing of patterns to functions; M3 L403 "key" names two tuples; input-position order undefined; M4 L435 write fixture text vs bytes (0xA3 test); M5 L474 traceability claim unverifiable; M6 L409 outflow/inflow undefined, "walk positions in order".
+Nits: heading Create/Modify; "stays fast" claim; read_rows sentence too long + header line for None; "normative"; parse_a names parse_date_dmy; {n}/{m} undefined; format_amount wording; exception order in write_ledger; duplicate call-site; M undefined/main long; test list as bullets; CUJ/"full"/"proving"; Build label; footer.

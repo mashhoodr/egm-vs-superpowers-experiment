@@ -1,0 +1,17 @@
+commit 970ba6c5ad0cc5785a836b8763eac0719799956a
+Date: Mon Nov 2 14:05:21 2026 +0500
+
+    feat: txmerge — dedupe overlapping exports, link transfers, categorise
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ .gitignore            |   3 +
+ BRIEF.md              |  46 ++++++++++
+ README.md             |  33 +++++++
+ stakeholder_log.md    |  53 +++++++++++
+ tests/test_txmerge.py | 230 +++++++++++++++++++++++++++++++++++++++++++++++
+ txmerge/__init__.py   |   1 +
+ txmerge/__main__.py   |   5 ++
+ txmerge/cli.py        |  63 +++++++++++++
+ txmerge/core.py       | 240 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 674 insertions(+)

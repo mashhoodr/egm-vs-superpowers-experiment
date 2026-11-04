@@ -1,0 +1,17 @@
+commit 6e1db6f02444733044d76445e279bf584390f141
+Date: Tue Nov 3 11:50:43 2026 +0500
+
+    tsinvoice: merge, dedupe, join and price timesheet exports
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ .gitignore              |   3 +
+ BRIEF.md                |  48 +++++++++++++
+ README.md               |  28 ++++++++
+ stakeholder_log.md      |  71 +++++++++++++++++++
+ tests/test_tsinvoice.py | 178 ++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/__init__.py   |   0
+ tsinvoice/__main__.py   |  63 +++++++++++++++++
+ tsinvoice/core.py       | 138 +++++++++++++++++++++++++++++++++++++
+ tsinvoice/parse.py      | 154 +++++++++++++++++++++++++++++++++++++++++
+ 9 files changed, 683 insertions(+)

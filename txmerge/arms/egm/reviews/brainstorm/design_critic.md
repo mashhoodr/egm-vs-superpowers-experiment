@@ -1,0 +1,5 @@
+# Brainstorm Goldfish: egm-design (summary of raw report)
+Blocker: (1) dedup survivor algorithm: running kept[key]; j-th occurrence in export kept only if j > kept[key]; each keeps own text and position; "export" = one --account argument; alternative (copies inherit first text) — ask stakeholder.
+Major: (2) strict amount regex, >2dp malformed, no sign in A, -0.00 -> 0.00, key on quantized value; (3) strict two-digit dates via regex + real-date check; Posting Date never validated; (4) header exact; wrong field count malformed; zero-byte exit 2; header-only fine; decode error exit 2; whitespace-only cell blank; same for rules; (5) output bytes; (6) validate everything before output, temp+os.replace, all-malformed -> header-only ledger exit 0; (7) pipeline order, greedy, abs-day distance, zero neither in nor out; (8) rules trim, casefold, blank category warn; inner-whitespace consequence.
+Nits: (9) line = physical start line; warning format; (10) group inflows by amount for speed; no set iteration; (11) CLI: first '=', f"T{n:04d}", self-pairing documented; (12) empty descriptions allowed.
+No alternative architectures; single-pass in-memory pipeline.

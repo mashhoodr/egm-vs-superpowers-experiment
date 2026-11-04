@@ -1,0 +1,224 @@
+commit 46f1dbd42adbb30697253026818077c669d20015
+Date: Tue Nov 3 09:53:35 2026 +0500
+
+    chore: init EGM arm with BRIEF
+
+
+ BRIEF.md       | 49 +++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md | 13 +++++++++++++
+ 2 files changed, 62 insertions(+)
+commit c00acb42bf1e0187c5d87e391966f99055fa5f8e
+Date: Tue Nov 3 10:02:29 2026 +0500
+
+    docs: EGM brainstorm — concepts brief, findings, stakeholder log
+
+
+ anchored_hypothesis.md |  44 ++++++++++++
+ brainstorm_findings.md | 191 +++++++++++++++++++++++++++++++++++++++++++++++++
+ concepts_brief.md      | 121 +++++++++++++++++++++++++++++++
+ process_log.md         |  14 ++++
+ stakeholder_log.md     | 108 ++++++++++++++++++++++++++++
+ 5 files changed, 478 insertions(+)
+commit a70fe899db7a2f80011fe778ac93a3d62cc6bc8d
+Date: Tue Nov 3 10:05:23 2026 +0500
+
+    docs: EGM draft — stockmerge design
+
+
+ design_draft.md            | 722 +++++++++++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md | 722 +++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md             |  15 +
+ 3 files changed, 1459 insertions(+)
+commit be9a0c23545b2c9770ea0f79d67fbd8bbd734c63
+Date: Tue Nov 3 10:16:08 2026 +0500
+
+    docs: EGM review stages 5-6 reports and fixes
+
+
+ comprehension_report.md    |  29 ++++++++++
+ comprehension_report_r2.md |  24 ++++++++
+ docs/designs/stockmerge.md | 135 +++++++++++++++++++++++++++++++++------------
+ process_log.md             |  27 +++++++++
+ zoom_out_report.md         |  77 ++++++++++++++++++++++++++
+ zoom_out_report_r2.md      | 112 +++++++++++++++++++++++++++++++++++++
+ 6 files changed, 369 insertions(+), 35 deletions(-)
+commit d87eb7bd4dca0801a2a7e4531794c1a457087eac
+Date: Tue Nov 3 10:23:49 2026 +0500
+
+    docs: stage 7 round 1 critic review and fixes
+
+
+ critic_report.md                    | 220 ++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md          | 204 ++++++++++++++++++++++-----------
+ goldfish_review_report.md           |  49 ++++++++
+ goldfish_review_report_stage7_r1.md |  49 ++++++++
+ process_log.md                      |   6 +
+ 5 files changed, 461 insertions(+), 67 deletions(-)
+commit 862f6bb941264c8c38a237c444c0d87df00a34be
+Date: Tue Nov 3 10:32:19 2026 +0500
+
+    docs: stage 7 round 2 fixes
+
+
+ critic_report_r2.md                 | 173 ++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md          |  67 +++++++++-----
+ goldfish_review_report.md           |  73 ++++++---------
+ goldfish_review_report_stage7_r2.md |  28 ++++++
+ process_log.md                      |   4 +
+ 5 files changed, 275 insertions(+), 70 deletions(-)
+commit 79cdebf75318b099124ed98a238f1fd1b826f9b2
+Date: Tue Nov 3 10:39:50 2026 +0500
+
+    docs: stage 7 round 3 fixes
+
+
+ critic_report_r3.md                 | 221 ++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md          |  94 ++++++++-------
+ goldfish_review_report.md           |  37 +++---
+ goldfish_review_report_stage7_r3.md |  23 ++++
+ process_log.md                      |   3 +
+ 5 files changed, 319 insertions(+), 59 deletions(-)
+commit 0d745e2484719183ff0e032e999f3678381b1cc3
+Date: Tue Nov 3 10:45:45 2026 +0500
+
+    docs: stage 7 round 4 fixes
+
+
+ critic_report_r4.md                 | 199 ++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md          |  66 +++++++-----
+ goldfish_review_report.md           |  26 ++---
+ goldfish_review_report_stage7_r4.md |  17 +++
+ process_log.md                      |   2 +
+ 5 files changed, 267 insertions(+), 43 deletions(-)
+commit 4f48b427446fdb462c5d091b6e3d333bf54c052c
+Date: Tue Nov 3 10:50:23 2026 +0500
+
+    docs: stage 7 round 5 fixes; critic loop closed at cap
+
+
+ critic_report_r5.md                 | 217 ++++++++++++++++++++++++++++++++++++
+ docs/designs/stockmerge.md          |  61 +++++-----
+ goldfish_review_report.md           |  24 ++--
+ goldfish_review_report_stage7_r5.md |  23 ++++
+ process_log.md                      |   8 ++
+ 5 files changed, 298 insertions(+), 35 deletions(-)
+commit cc29b926ef7da5f9d507ac34cb7c121efb675160
+Date: Tue Nov 3 10:55:49 2026 +0500
+
+    docs: stage 8 zoom-out fixes
+
+
+ docs/designs/stockmerge.md      | 100 +++++++++-------------
+ intermediate_zoom_out_report.md | 184 ++++++++++++++++++++++++++++++++++++++++
+ process_log.md                  |   4 +
+ 3 files changed, 229 insertions(+), 59 deletions(-)
+commit 87356d0a2477575cdbb11f895c824878b4f2ffe0
+Date: Tue Nov 3 11:01:57 2026 +0500
+
+    docs: stage 8 re-audit fixes
+
+
+ docs/designs/stockmerge.md         |  59 ++++++-----
+ intermediate_zoom_out_report_r2.md | 200 +++++++++++++++++++++++++++++++++++++
+ process_log.md                     |   5 +
+ 3 files changed, 238 insertions(+), 26 deletions(-)
+commit c1ba0c878aa61c05a216b887bccf08e14460a7d5
+Date: Tue Nov 3 11:08:11 2026 +0500
+
+    docs: stage 9 round 1 — plan rewrite
+
+
+ docs/designs/stockmerge.md          | 437 ++++++++++++++++++++++--------------
+ goldfish_review_report.md           |  29 ++-
+ goldfish_review_report_stage9_r1.md |  20 ++
+ implementation_readiness_report.md  | 229 +++++++++++++++++++
+ process_log.md                      |   3 +
+ 5 files changed, 528 insertions(+), 190 deletions(-)
+commit cb9c4c127254971326863a1c99ab7ef2eb2692d3
+Date: Tue Nov 3 11:15:24 2026 +0500
+
+    docs: stage 9 round 2 fixes
+
+
+ docs/designs/stockmerge.md            |  56 +++++++---
+ goldfish_review_report.md             |  25 +++--
+ goldfish_review_report_stage9_r2.md   |  19 ++++
+ implementation_readiness_report_r2.md | 196 ++++++++++++++++++++++++++++++++++
+ process_log.md                        |   2 +
+ 5 files changed, 270 insertions(+), 28 deletions(-)
+commit 5bdb83dc256debbe1c6093a3cb0c4442a20099da
+Date: Tue Nov 3 11:21:25 2026 +0500
+
+    docs: stage 9 round 3 fixes
+
+
+ docs/designs/stockmerge.md            |  31 ++++--
+ goldfish_review_report.md             |  20 ++--
+ goldfish_review_report_stage9_r3.md   |  15 +++
+ implementation_readiness_report_r3.md | 188 ++++++++++++++++++++++++++++++++++
+ process_log.md                        |   2 +
+ 5 files changed, 233 insertions(+), 23 deletions(-)
+commit 34127e64855ea9daf745e7d2329ff7c61573ae0c
+Date: Tue Nov 3 11:29:42 2026 +0500
+
+    docs: stage 9 round 4 fixes
+
+
+ docs/designs/stockmerge.md            |  52 ++++--
+ goldfish_review_report.md             |  19 ++-
+ goldfish_review_report_stage9_r4.md   |  18 ++
+ implementation_readiness_report_r4.md | 298 ++++++++++++++++++++++++++++++++++
+ process_log.md                        |   1 +
+ 5 files changed, 368 insertions(+), 20 deletions(-)
+commit f71a0a04267c32529523362e1df6e21f87676bdc
+Date: Tue Nov 3 11:38:21 2026 +0500
+
+    docs: stage 9 round 5 fix; design approved
+
+
+ docs/designs/stockmerge.md            |  12 ++-
+ goldfish_review_report.md             |  19 ++--
+ goldfish_review_report_stage9_r5.md   |  15 +++
+ implementation_readiness_report_r5.md | 169 ++++++++++++++++++++++++++++++++++
+ process_log.md                        |   5 +
+ 5 files changed, 205 insertions(+), 15 deletions(-)
+commit 8f99ba5e35723a7c4dbc9ae3a5650cfdd6f81bec
+Date: Tue Nov 3 11:41:45 2026 +0500
+
+    feat: implement stockmerge per approved design
+Pipeline: parse args, check --out, load rules, read Format A/B exports,
+dedup per location, greedy move linking, categorise, sort, atomic write.
+122 pytest tests covering the design's rule-to-test map.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ .gitignore             |   3 +
+ README.md              |  65 +++++++++++
+ pyproject.toml         |   9 ++
+ stockmerge/__init__.py |   3 +
+ stockmerge/__main__.py |   3 +
+ stockmerge/cli.py      | 123 ++++++++++++++++++++
+ stockmerge/dedup.py    |  24 ++++
+ stockmerge/model.py    |  74 ++++++++++++
+ stockmerge/moves.py    |  41 +++++++
+ stockmerge/readers.py  | 158 ++++++++++++++++++++++++++
+ stockmerge/rules.py    |  63 +++++++++++
+ stockmerge/writer.py   |  58 ++++++++++
+ tests/conftest.py      |  63 +++++++++++
+ tests/test_cli.py      | 301 +++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test_dedup.py    |  49 ++++++++
+ tests/test_model.py    |  35 ++++++
+ tests/test_moves.py    | 104 +++++++++++++++++
+ tests/test_readers.py  | 215 +++++++++++++++++++++++++++++++++++
+ tests/test_rules.py    |  84 ++++++++++++++
+ tests/test_writer.py   |  47 ++++++++
+ 20 files changed, 1522 insertions(+)
+commit 9af23201b2d31adebdb462b27bd4e73b4afbf96a
+Date: Tue Nov 3 11:44:32 2026 +0500
+
+    chore: process log — implementation and departures
+
+
+ process_log.md | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)

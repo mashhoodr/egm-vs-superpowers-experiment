@@ -1,0 +1,3 @@
+# Stage 9 R1 egm-codebase-details (completed): 0 Blocker, 5 Major, 10 Nit
+M1 no phases. M2 coverage gaps (D4, D6 Format B, D8, D13 values, D15 cleanup path untested, D19, D20, D25, D26, D5 signs). M3 REASON undefined; str(OSError) shows temp path. M4 date regex \d. M5 bare \r quoting on 3.11 (Elephant check on 3.13: quoted).
+Nits: N1 negative-zero reason wrong (verified: -Decimal("0.00") == Decimal('0.00') positive; Decimal("-0.00") stays negative); N2 cleanup deletes file not created; N3 M counting; N4 double prefix; N5 header line unused; N6 allow_abbrev; N7 pythonpath + version; N8 bytes fixture; N9 exact unclosed-quote input; N10 decode position is chunk-relative.

@@ -1,0 +1,149 @@
+commit 23ba4b21fef90c16491bf2c7c739305979f3a9db
+Date: Tue Nov 3 11:47:43 2026 +0500
+
+    chore: init repo with brief and logs
+
+
+ BRIEF.md           | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md     |  6 ++++++
+ stakeholder_log.md |  3 +++
+ 3 files changed, 57 insertions(+)
+commit 1700396c9cef24e2ad06351a42ecb6676b7327fe
+Date: Tue Nov 3 11:55:52 2026 +0500
+
+    docs: tsinvoice design spec
+
+
+ .../specs/2026-11-03-tsinvoice-design.md           | 158 +++++++++++++++++++++
+ process_log.md                                     |  20 +++
+ stakeholder_log.md                                 | 108 ++++++++++++++
+ 3 files changed, 286 insertions(+)
+commit 6bae0a62321aef7245f50e3f471b0acec45692e7
+Date: Tue Nov 3 11:59:39 2026 +0500
+
+    docs: tsinvoice implementation plan
+
+
+ docs/superpowers/plans/2026-11-03-tsinvoice.md | 1304 ++++++++++++++++++++++++
+ process_log.md                                 |    5 +
+ 2 files changed, 1309 insertions(+)
+commit 93b51a1a302af9191446097a7dbd33f3eaf5d3a3
+Date: Tue Nov 3 12:00:46 2026 +0500
+
+    feat: project scaffold and core model
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ pyproject.toml        |  8 ++++++
+ tests/__init__.py     |  0
+ tests/factories.py    | 12 +++++++++
+ tests/test_model.py   | 36 +++++++++++++++++++++++++++
+ tsinvoice/__init__.py |  1 +
+ tsinvoice/model.py    | 67 +++++++++++++++++++++++++++++++++++++++++++++++++++
+ 6 files changed, 124 insertions(+)
+commit ba45a72391540c2c7b3ec9befbcc8bc2f8226cfe
+Date: Tue Nov 3 12:02:45 2026 +0500
+
+    feat: parse format A and B tracker exports
+Adds read_tracker, which reads a format A (Client,Description,Start,End)
+or format B (client,task,start_iso,duration_minutes) export into Entry
+objects. Bad rows warn and are skipped; unreadable, empty or unknown-header
+files raise FatalError. Also adds a .gitignore for __pycache__ and
+.pytest_cache.
+
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ .gitignore          |   2 +
+ tests/test_parse.py | 122 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/parse.py  |  91 +++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 215 insertions(+)
+commit 968b822c43acb27906c6df8ba6af82e29be037ac
+Date: Tue Nov 3 12:04:22 2026 +0500
+
+    feat: dedupe entries across exports by max count
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_dedupe.py | 44 ++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/dedupe.py  | 24 ++++++++++++++++++++++++
+ 2 files changed, 68 insertions(+)
+commit 5b15814c20e6d9694588d29634f52ca14c893e83
+Date: Tue Nov 3 12:05:57 2026 +0500
+
+    feat: join continued entries into sessions
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_join.py | 89 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/join.py  | 49 ++++++++++++++++++++++++++++++
+ 2 files changed, 138 insertions(+)
+commit 448e268132c28c91da7e73b131a658a2b897b0ed
+Date: Tue Nov 3 12:10:25 2026 +0500
+
+    feat: load rates and price sessions
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_rates.py | 66 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/rates.py  | 61 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 127 insertions(+)
+commit c62ba52433194901abe8ab3cf84192df9ca822ba
+Date: Tue Nov 3 12:11:58 2026 +0500
+
+    feat: session ids, ordering and CSV rendering
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_output.py     | 36 ++++++++++++++++++++++++++++++++++++
+ tests/test_session_id.py | 33 +++++++++++++++++++++++++++++++++
+ tsinvoice/output.py      | 28 ++++++++++++++++++++++++++++
+ tsinvoice/session_id.py  | 25 +++++++++++++++++++++++++
+ 4 files changed, 122 insertions(+)
+commit d4f9952bf608f886ffb9ac643db1f40daebc1df0
+Date: Tue Nov 3 12:13:43 2026 +0500
+
+    feat: merge CLI with end-to-end tests
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_cli.py     | 107 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/__main__.py |   3 ++
+ tsinvoice/cli.py      |  71 +++++++++++++++++++++++++++++++++
+ 3 files changed, 181 insertions(+)
+commit ed61f5acaaaead45d6e3712c85bde9fbbc560cb3
+Date: Tue Nov 3 12:22:14 2026 +0500
+
+    fix: final-review findings (huge duration hang, cp1252 fallback, atomic output, -0 rate, date-only start, warning quoting, spec wording)
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+
+
+ .../specs/2026-11-03-tsinvoice-design.md           | 17 ++++++++++----
+ tests/test_cli.py                                  | 22 ++++++++++++++++++
+ tests/test_parse.py                                | 27 +++++++++++++++++++++-
+ tests/test_rates.py                                | 14 +++++++++++
+ tsinvoice/cli.py                                   | 17 ++++++++++++--
+ tsinvoice/csvio.py                                 | 26 +++++++++++++++++++++
+ tsinvoice/parse.py                                 | 13 +++++------
+ tsinvoice/rates.py                                 | 11 +++------
+ 8 files changed, 125 insertions(+), 22 deletions(-)
+commit 0fdff00a2740a07446196dcf3c84e10962f3d2a2
+Date: Tue Nov 3 12:24:40 2026 +0500
+
+    docs: process and stakeholder logs
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ process_log.md     | 41 +++++++++++++++++++++++++++++++++++++++++
+ stakeholder_log.md | 14 ++++++++++++++
+ 2 files changed, 55 insertions(+)
+commit 4a7e3c7f6c6fece671e2c1512076733e8ae214d7
+Date: Tue Nov 3 12:26:01 2026 +0500
+
+    docs: preserve SDD ledger and log skill departures
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ docs/superpowers/sdd-ledger.md | 75 ++++++++++++++++++++++++++++++++++++++++++
+ process_log.md                 |  7 ++++
+ 2 files changed, 82 insertions(+)

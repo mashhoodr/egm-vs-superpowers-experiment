@@ -1,0 +1,20 @@
+commit 9c88f78fbff5737445603b33b1272680abba879c
+Date: Tue Nov 3 09:56:25 2026 +0500
+
+    feat: stockmerge merges overlapping stock-take exports
+Dedup across exports, move linking, rule categorisation, CLI and tests.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ .gitignore               |   2 +
+ BRIEF.md                 |  49 +++++++++
+ README.md                |  35 +++++++
+ pyproject.toml           |   2 +
+ stakeholder_log.md       |  67 +++++++++++++
+ stockmerge/__init__.py   |   1 +
+ stockmerge/__main__.py   |   3 +
+ stockmerge/cli.py        |  36 +++++++
+ stockmerge/core.py       | 251 +++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test_stockmerge.py | 224 ++++++++++++++++++++++++++++++++++++++++++
+ 10 files changed, 670 insertions(+)

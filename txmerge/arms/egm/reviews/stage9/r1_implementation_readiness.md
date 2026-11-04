@@ -1,0 +1,3 @@
+# Stage 9 R1 egm-implementation-readiness (completed): 0 Blocker, 4 Major, 9 Nit
+M1 no phases/checkpoints (standard requires). M2 coverage claim vs tests: D4, D8 field count, D19, D20, D25, D26, symlink replaced, blank-rows-only input. M3 summary/warning assertions loose: assert exact summary with counts (M excludes rule warnings), exact CUJ 3 warning. M4 embedded lone \r quoting risk; test both \n and \r. (Elephant check in scratchpad, Python 3.13: csv writer with lineterminator="\n" quotes "a\rb" -> '"a\rb"'.)
+Nits: reason = str(e); L385 prefix; TEXT = trimmed cell; date regex \d; cleanup deletes file not created; samefile OSError; how M is counted; pyproject version + pythonpath; conftest bytes.

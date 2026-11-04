@@ -1,0 +1,145 @@
+commit dbba748ec9e66bb27bbc1742ebda49ed75b3a9e6
+Date: Mon Nov 2 14:02:42 2026 +0500
+
+    chore: add brief
+
+
+ BRIEF.md | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+commit 4dda87d15c0a693fddc702c99da41795d15d6d6d
+Date: Mon Nov 2 14:05:46 2026 +0500
+
+    docs: txmerge design spec, stakeholder and process logs
+
+
+ .../superpowers/specs/2026-11-02-txmerge-design.md | 89 ++++++++++++++++++++++
+ process_log.md                                     | 14 ++++
+ stakeholder_log.md                                 | 71 +++++++++++++++++
+ 3 files changed, 174 insertions(+)
+commit 34b7f10b7d060d4ae57676d318f25e1d77bb200b
+Date: Mon Nov 2 14:06:41 2026 +0500
+
+    docs: spec self-review fixes
+
+
+ docs/superpowers/specs/2026-11-02-txmerge-design.md |  7 +++++--
+ process_log.md                                      | 12 ++++++++++++
+ stakeholder_log.md                                  |  4 ++++
+ 3 files changed, 21 insertions(+), 2 deletions(-)
+commit 3ee32230bf00d36346fcccb8bf444a584fe20b90
+Date: Mon Nov 2 14:09:41 2026 +0500
+
+    docs: txmerge implementation plan
+
+
+ docs/superpowers/plans/2026-11-02-txmerge.md | 1140 ++++++++++++++++++++++++++
+ process_log.md                               |    5 +
+ 2 files changed, 1145 insertions(+)
+commit 1753b7d115bfb50023298ee3230c4af976109542
+Date: Mon Nov 2 14:10:12 2026 +0500
+
+    docs: process log for SDD setup
+
+
+ process_log.md | 4 ++++
+ 1 file changed, 4 insertions(+)
+commit 3617a16afd9ddca60a19cb6860918d1fda7fca55
+Date: Mon Nov 2 14:10:50 2026 +0500
+
+    feat: parse Format A and B bank exports
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ pyproject.toml        |   3 ++
+ tests/test_readers.py | 130 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ txmerge/__init__.py   |   0
+ txmerge/model.py      |  24 ++++++++++
+ txmerge/readers.py    |  95 ++++++++++++++++++++++++++++++++++++
+ 5 files changed, 252 insertions(+)
+commit de0b97aa54d1eccf429478c3aa787ab04b3b5756
+Date: Mon Nov 2 14:13:05 2026 +0500
+
+    feat: dedupe overlapping exports by max count per file
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_dedupe.py | 64 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ txmerge/dedupe.py    | 36 +++++++++++++++++++++++++++++
+ 2 files changed, 100 insertions(+)
+commit 2a29c7bcb303bd7db9ee8e30640d3cf733b423fd
+Date: Mon Nov 2 14:14:41 2026 +0500
+
+    feat: order ledger rows and pair transfers between accounts
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_transfers.py | 101 ++++++++++++++++++++++++++++++++++++++++++++++++
+ txmerge/transfers.py    |  40 +++++++++++++++++++
+ 2 files changed, 141 insertions(+)
+commit 342df71a2e818d38d184eaff760d96f30d759199
+Date: Mon Nov 2 14:16:25 2026 +0500
+
+    feat: categorise descriptions by first matching rule
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_categorise.py | 42 ++++++++++++++++++++++++++++++++++++++++++
+ txmerge/categorise.py    | 34 ++++++++++++++++++++++++++++++++++
+ 2 files changed, 76 insertions(+)
+commit b00c6b74abef1c4454abe8fc95ef49456a12e7df
+Date: Mon Nov 2 14:17:55 2026 +0500
+
+    feat: write ledger CSV with exact header and 2dp amounts
+Co-Authored-By: Claude Haiku 5.5 <noreply@anthropic.com>
+
+
+ tests/test_writer.py | 38 ++++++++++++++++++++++++++++++++++++++
+ txmerge/writer.py    | 25 +++++++++++++++++++++++++
+ 2 files changed, 63 insertions(+)
+commit c739c0a1d1b2fcfdec25d279adfc2d28d9ca71f5
+Date: Mon Nov 2 14:19:41 2026 +0500
+
+    feat: txmerge merge CLI wiring the full pipeline
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+
+
+ tests/test_cli.py   | 111 ++++++++++++++++++++++++++++++++++++++++++++++++++++
+ txmerge/__main__.py |   3 ++
+ txmerge/cli.py      |  58 +++++++++++++++++++++++++++
+ 3 files changed, 172 insertions(+)
+commit f9325f53090ce1634fcdd1a4a4c0e0fbe07c778b
+Date: Mon Nov 2 14:24:22 2026 +0500
+
+    docs: stakeholder Q7 (final review phase)
+
+
+ stakeholder_log.md | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+commit 2d3a41e7ad32c6b2763383b1fa608b08ae580047
+Date: Mon Nov 2 14:26:15 2026 +0500
+
+    fix: strict per-line CSV parsing, plain-number amounts, atomic write, zero columns, empty-category rules
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+
+
+ .gitignore                                         |   3 +
+ .../sdd/2026-11-02-txmerge/final-fix-report.md     |  38 ++++++++
+ .../superpowers/specs/2026-11-02-txmerge-design.md |  13 ++-
+ tests/test_categorise.py                           |  13 +++
+ tests/test_cli.py                                  |  10 ++
+ tests/test_readers.py                              | 102 +++++++++++++++++++++
+ tests/test_writer.py                               |  12 +++
+ txmerge/categorise.py                              |   6 +-
+ txmerge/cli.py                                     |   4 +
+ txmerge/readers.py                                 |  49 ++++++++--
+ txmerge/writer.py                                  |  33 +++++--
+ 11 files changed, 260 insertions(+), 23 deletions(-)
+commit 826b0a88b78caf890799539de789fdda6aa2435e
+Date: Mon Nov 2 14:28:11 2026 +0500
+
+    docs: process log — tokens, ledger, verification
+
+
+ .../sdd/2026-11-02-txmerge/final-fix-report.md     |  38 --------
+ process_log.md                                     | 106 +++++++++++++++++++++
+ 2 files changed, 106 insertions(+), 38 deletions(-)

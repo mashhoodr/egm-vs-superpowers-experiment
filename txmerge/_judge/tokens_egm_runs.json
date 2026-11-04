@@ -1,0 +1,3099 @@
+{
+ "egm1": [
+  {
+   "id": "a0537cb18d069429f",
+   "depth": 0,
+   "type": "ARM",
+   "desc": "egm1",
+   "calls": 159,
+   "input": 396,
+   "cache_read": 43879610,
+   "cache_write": 458742,
+   "output": 55680,
+   "processed": 44394428,
+   "peak_ctx": 458207,
+   "final_ctx": 458207,
+   "tools": {
+    "Bash": 99,
+    "Read": 1,
+    "Agent": 45,
+    "Write": 4,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Bash": 182524,
+    "Agent": 48240,
+    "Read:bgtucq5c7.txt": 33501,
+    "Write": 847,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a644d380879df86e8",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder questions round 1",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58422,
+   "cache_write": 27158,
+   "output": 113,
+   "processed": 85697,
+   "peak_ctx": 45271,
+   "final_ctx": 45271,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "abbad340252800038",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder questions round 2",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58409,
+   "cache_write": 27145,
+   "output": 113,
+   "processed": 85671,
+   "peak_ctx": 45258,
+   "final_ctx": 45258,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ac7b12ce15ecf2286",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Brainstorm: design lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6468,
+   "cache_write": 14139,
+   "output": 405,
+   "processed": 21016,
+   "peak_ctx": 14141,
+   "final_ctx": 14141,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:design_critic.md": 8052,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae3ac7e713070e398",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Brainstorm: codebase-details lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6501,
+   "cache_write": 14456,
+   "output": 409,
+   "processed": 21370,
+   "peak_ctx": 14458,
+   "final_ctx": 14458,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:codebase_details.md": 9756,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af9ea23e2104569d8",
+   "depth": 1,
+   "type": "egm:egm-zoom-out",
+   "desc": "Brainstorm: zoom-out lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6465,
+   "cache_write": 14558,
+   "output": 409,
+   "processed": 21436,
+   "peak_ctx": 14560,
+   "final_ctx": 14560,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:zoom_out.md": 10238,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a5f65202a714ecbf5",
+   "depth": 1,
+   "type": "egm:egm-comprehension",
+   "desc": "Brainstorm: comprehension lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6461,
+   "cache_write": 14444,
+   "output": 403,
+   "processed": 21312,
+   "peak_ctx": 14446,
+   "final_ctx": 14446,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:comprehension.md": 9892,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "afe25b8fa17d523ef",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Brainstorm: impl-readiness lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6470,
+   "cache_write": 14164,
+   "output": 411,
+   "processed": 21049,
+   "peak_ctx": 14166,
+   "final_ctx": 14166,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:implementation_readiness.md": 8218,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a1f933434ed722575",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Brainstorm: structural lens",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9365,
+   "cache_write": 11306,
+   "output": 402,
+   "processed": 21077,
+   "peak_ctx": 14210,
+   "final_ctx": 14210,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 17420,
+    "Read:structural.md": 8286,
+    "Read:working_hypothesis.md": 6288,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a1fb63a25155b6918",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder questions round 3",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58588,
+   "cache_write": 27324,
+   "output": 110,
+   "processed": 86026,
+   "peak_ctx": 45437,
+   "final_ctx": 45437,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ab4ef35b5b1c3d5e8",
+   "depth": 1,
+   "type": "egm:egm-zoom-out",
+   "desc": "Stage 5 zoom-out review",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 69399,
+   "cache_write": 34241,
+   "output": 3230,
+   "processed": 106878,
+   "peak_ctx": 37145,
+   "final_ctx": 37145,
+   "tools": {
+    "Read": 12,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 69920,
+    "Read:stakeholder_log.md": 23044,
+    "Read:concepts_brief.md": 12086,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Glob": 461,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a80b60490e5ee6305",
+   "depth": 1,
+   "type": "egm:egm-comprehension",
+   "desc": "Stage 6 comprehension review",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 37898,
+   "cache_write": 28145,
+   "output": 3119,
+   "processed": 69168,
+   "peak_ctx": 31049,
+   "final_ctx": 31049,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 70468,
+    "Read:stakeholder_log.md": 23044,
+    "Read:comprehension.md": 9892,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61,
+    "Glob": 26
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a0da84f9c0230d56d",
+   "depth": 1,
+   "type": "egm:egm-comprehension",
+   "desc": "Stage 6 comprehension re-audit",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10130,
+   "cache_write": 25372,
+   "output": 408,
+   "processed": 35914,
+   "peak_ctx": 28844,
+   "final_ctx": 28844,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 73414,
+    "Read:stakeholder_log.md": 23044,
+    "Read:comprehension.md": 9892,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3b9890f47a542f5f",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Stage 7 R1 design critic",
+   "calls": 2,
+   "input": 6,
+   "cache_read": 33187,
+   "cache_write": 30216,
+   "output": 11638,
+   "processed": 75047,
+   "peak_ctx": 56677,
+   "final_ctx": 56677,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 45972,
+    "Read:stakeholder_log.md": 23044,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8ddac2724639a569",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Stage 7 R1 structural",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 33253,
+   "cache_write": 23171,
+   "output": 2690,
+   "processed": 59120,
+   "peak_ctx": 26075,
+   "final_ctx": 26075,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 45972,
+    "Read:stakeholder_log.md": 23044,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 522,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af9aa62a081333e81",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 7 R1 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9548,
+   "cache_write": 20035,
+   "output": 427,
+   "processed": 30014,
+   "peak_ctx": 22939,
+   "final_ctx": 22939,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 45972,
+    "Read:stakeholder_log.md": 23044,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af68a8432d09368f2",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder questions round 4",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58352,
+   "cache_write": 27088,
+   "output": 115,
+   "processed": 85559,
+   "peak_ctx": 45201,
+   "final_ctx": 45201,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a05ca119f886d374a",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Stage 7 R2 design critic",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10200,
+   "cache_write": 22566,
+   "output": 524,
+   "processed": 33294,
+   "peak_ctx": 26038,
+   "final_ctx": 26038,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 57788,
+    "Read:stakeholder_log.md": 25256,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae0b9972354e286aa",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Stage 7 R2 structural",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 36201,
+   "cache_write": 24044,
+   "output": 2008,
+   "processed": 62259,
+   "peak_ctx": 27514,
+   "final_ctx": 27514,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 57338,
+    "Read:stakeholder_log.md": 25256,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61,
+    "Glob": 26
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae8b7e34c3008cc60",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 7 R2 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10113,
+   "cache_write": 21951,
+   "output": 25,
+   "processed": 32093,
+   "peak_ctx": 25420,
+   "final_ctx": 25420,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 57788,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3d0d29f27e241114",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Stage 7 R3 design critic",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10200,
+   "cache_write": 23191,
+   "output": 528,
+   "processed": 33923,
+   "peak_ctx": 26663,
+   "final_ctx": 26663,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 61730,
+    "Read:stakeholder_log.md": 25256,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae850294c07569024",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Stage 7 R3 structural",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 36925,
+   "cache_write": 24804,
+   "output": 2046,
+   "processed": 63781,
+   "peak_ctx": 28274,
+   "final_ctx": 28274,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 61730,
+    "Read:stakeholder_log.md": 25256,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61,
+    "Glob": 26
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3ebb1cd24f7a99a9",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 7 R3 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10113,
+   "cache_write": 22576,
+   "output": 425,
+   "processed": 33118,
+   "peak_ctx": 26045,
+   "final_ctx": 26045,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 61730,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae3e96a52c2ba4847",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Stage 7 R4 design critic",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10200,
+   "cache_write": 23623,
+   "output": 528,
+   "processed": 34355,
+   "peak_ctx": 27095,
+   "final_ctx": 27095,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64300,
+    "Read:stakeholder_log.md": 25256,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a1f16a75a1f449943",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Stage 7 R4 structural",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 37357,
+   "cache_write": 26024,
+   "output": 2366,
+   "processed": 65753,
+   "peak_ctx": 29494,
+   "final_ctx": 29494,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64300,
+    "Read:stakeholder_log.md": 25256,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 899,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a79576d2be6c8a6c1",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 7 R4 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10113,
+   "cache_write": 23008,
+   "output": 6332,
+   "processed": 39457,
+   "peak_ctx": 26477,
+   "final_ctx": 26477,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64300,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ac300e291199dfd0e",
+   "depth": 1,
+   "type": "egm:egm-design",
+   "desc": "Stage 7 R5 design critic",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10250,
+   "cache_write": 24262,
+   "output": 529,
+   "processed": 35045,
+   "peak_ctx": 27734,
+   "final_ctx": 27734,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 67754,
+    "Read:stakeholder_log.md": 25256,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ac7e4fbcda09a36b7",
+   "depth": 1,
+   "type": "egm:egm-structural",
+   "desc": "Stage 7 R5 structural",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 38046,
+   "cache_write": 28399,
+   "output": 5537,
+   "processed": 71988,
+   "peak_ctx": 31869,
+   "final_ctx": 31869,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "Grep": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 67754,
+    "Read:stakeholder_log.md": 25256,
+    "Read:structural.md": 8286,
+    "Grep": 4842,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 152,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae630112839fceae3",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 7 R5 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10163,
+   "cache_write": 23647,
+   "output": 6755,
+   "processed": 40569,
+   "peak_ctx": 27116,
+   "final_ctx": 27116,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 67754,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8cb243a3b7f32a1a",
+   "depth": 1,
+   "type": "egm:egm-zoom-out",
+   "desc": "Stage 8 intermediate zoom-out",
+   "calls": 3,
+   "input": 8,
+   "cache_read": 47005,
+   "cache_write": 39974,
+   "output": 9196,
+   "processed": 96183,
+   "peak_ctx": 42880,
+   "final_ctx": 42880,
+   "tools": {
+    "Read": 12,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 104404,
+    "Read:stakeholder_log.md": 25256,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:zoom_out_report.md": 3124,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "afa6bec02148fd974",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Stage 9 R1 impl-readiness",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9720,
+   "cache_write": 31613,
+   "output": 506,
+   "processed": 41843,
+   "peak_ctx": 34517,
+   "final_ctx": 34517,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 100302,
+    "Read:stakeholder_log.md": 25256,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3a8a8e6e291f7cad",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Stage 9 R1 codebase-details",
+   "calls": 2,
+   "input": 6,
+   "cache_read": 44540,
+   "cache_write": 45478,
+   "output": 16980,
+   "processed": 107004,
+   "peak_ctx": 83182,
+   "final_ctx": 83182,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 100302,
+    "Read:stakeholder_log.md": 25256,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8e5328549ac60a5f",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 9 R1 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9597,
+   "cache_write": 18457,
+   "output": 427,
+   "processed": 28485,
+   "peak_ctx": 21361,
+   "final_ctx": 21361,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 31992,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a680521007a5c3f99",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Stage 9 R2 impl-readiness",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10291,
+   "cache_write": 34020,
+   "output": 512,
+   "processed": 44827,
+   "peak_ctx": 37495,
+   "final_ctx": 37495,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 113000,
+    "Read:stakeholder_log.md": 25256,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a0a95ab48ca713fb2",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Stage 9 R2 codebase-details",
+   "calls": 2,
+   "input": 6,
+   "cache_read": 48087,
+   "cache_write": 50338,
+   "output": 18202,
+   "processed": 116633,
+   "peak_ctx": 91589,
+   "final_ctx": 91589,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 113000,
+    "Read:stakeholder_log.md": 25256,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "adb68f5e9a65db949",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 9 R2 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10162,
+   "cache_write": 20858,
+   "output": 427,
+   "processed": 31451,
+   "peak_ctx": 24327,
+   "final_ctx": 24327,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 44600,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af0dd4c76e71ca89e",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Stage 9 R3 impl-readiness",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10315,
+   "cache_write": 34631,
+   "output": 510,
+   "processed": 45460,
+   "peak_ctx": 38106,
+   "final_ctx": 38106,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 115870,
+    "Read:stakeholder_log.md": 25256,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af964265a3cb84bf4",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Stage 9 R3 codebase-details",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10337,
+   "cache_write": 34918,
+   "output": 505,
+   "processed": 45764,
+   "peak_ctx": 38391,
+   "final_ctx": 38391,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 115870,
+    "Read:stakeholder_log.md": 25256,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a22515754d4296273",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 9 R3 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9597,
+   "cache_write": 22032,
+   "output": 449,
+   "processed": 32082,
+   "peak_ctx": 24936,
+   "final_ctx": 24936,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 47470,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8a0f777fba7d863c",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Stage 9 R4 impl-readiness",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10315,
+   "cache_write": 35020,
+   "output": 512,
+   "processed": 45851,
+   "peak_ctx": 38495,
+   "final_ctx": 38495,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 118030,
+    "Read:stakeholder_log.md": 25256,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "aba7c67ad2ab46c2b",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Stage 9 R4 codebase-details",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10337,
+   "cache_write": 35307,
+   "output": 508,
+   "processed": 46156,
+   "peak_ctx": 38780,
+   "final_ctx": 38780,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 118030,
+    "Read:stakeholder_log.md": 25256,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a6daac5985fa80701",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 9 R4 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9648,
+   "cache_write": 34960,
+   "output": 405,
+   "processed": 45017,
+   "peak_ctx": 37864,
+   "final_ctx": 37864,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 118030,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3f2c6540910f21bf",
+   "depth": 1,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Stage 9 R5 impl-readiness",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10315,
+   "cache_write": 35532,
+   "output": 512,
+   "processed": 46363,
+   "peak_ctx": 39007,
+   "final_ctx": 39007,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 120288,
+    "Read:stakeholder_log.md": 25256,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a16f5f46972378312",
+   "depth": 1,
+   "type": "egm:egm-codebase-details",
+   "desc": "Stage 9 R5 codebase-details",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10337,
+   "cache_write": 35819,
+   "output": 18500,
+   "processed": 64660,
+   "peak_ctx": 39292,
+   "final_ctx": 39292,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 120288,
+    "Read:stakeholder_log.md": 25256,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a2f4340834fc32cbc",
+   "depth": 1,
+   "type": "egm:egm-style",
+   "desc": "Stage 9 R5 style",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10213,
+   "cache_write": 34907,
+   "output": 4665,
+   "processed": 49789,
+   "peak_ctx": 38376,
+   "final_ctx": 38376,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 120288,
+    "Read:stakeholder_log.md": 25256,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a91c2ca8f155d6702",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Implement txmerge from design",
+   "calls": 12,
+   "input": 24,
+   "cache_read": 759884,
+   "cache_write": 74704,
+   "output": 6559,
+   "processed": 841171,
+   "peak_ctx": 92817,
+   "final_ctx": 92817,
+   "tools": {
+    "Bash": 11,
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:bsgws5tzn.txt": 61295,
+    "Bash": 7925,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  }
+ ],
+ "egm2": [
+  {
+   "id": "a944dc18f7075e18d",
+   "depth": 0,
+   "type": "ARM",
+   "desc": "egm2",
+   "calls": 129,
+   "input": 296,
+   "cache_read": 23470571,
+   "cache_write": 1871159,
+   "output": 16872,
+   "processed": 25358898,
+   "peak_ctx": 302911,
+   "final_ctx": 302911,
+   "tools": {
+    "Bash": 114,
+    "Agent": 24,
+    "Write": 2,
+    "ToolSearch": 2,
+    "TaskStop": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Bash": 235091,
+    "Agent": 23584,
+    "TaskStop": 5649,
+    "Write": 424,
+    "SubagentHandback": 61,
+    "ToolSearch": 0
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a252940a1ff5653cc",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder round 1 brainstorm",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58494,
+   "cache_write": 27230,
+   "output": 110,
+   "processed": 85838,
+   "peak_ctx": 45343,
+   "final_ctx": 45343,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "aaecebfd89940369f",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder round 2 brainstorm",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58505,
+   "cache_write": 27241,
+   "output": 113,
+   "processed": 85863,
+   "peak_ctx": 45354,
+   "final_ctx": 45354,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3a903fca21235752",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Synthesizer brainstorm multi-lens",
+   "calls": 16,
+   "input": 54,
+   "cache_read": 647754,
+   "cache_write": 89755,
+   "output": 9591,
+   "processed": 747154,
+   "peak_ctx": 69900,
+   "final_ctx": 69900,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "Agent": 12,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:synthesizer.md": 9278,
+    "Agent": 5838,
+    "Read:BRIEF.md": 2221,
+    "Read:process_log.md": 2112,
+    "Glob": 1416,
+    "Write": 219,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ad3528311b501ecfb",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "Design brainstormer review",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 21489,
+   "cache_write": 18074,
+   "output": 617,
+   "processed": 40186,
+   "peak_ctx": 18076,
+   "final_ctx": 18076,
+   "tools": {
+    "Read": 16,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:design_critic.md": 8052,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:re-implementation-standard.md": 3280,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Read:heilmeier-standard.md": 2478,
+    "Glob": 1088,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a42cdd45ed8975a8c",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details brainstormer",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 21863,
+   "cache_write": 18456,
+   "output": 6817,
+   "processed": 47142,
+   "peak_ctx": 18458,
+   "final_ctx": 18458,
+   "tools": {
+    "Read": 16,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:codebase_details.md": 9756,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:re-implementation-standard.md": 3280,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Read:heilmeier-standard.md": 2478,
+    "Glob": 1088,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a53d55a7e26d56228",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out brainstormer review",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 40365,
+   "cache_write": 19033,
+   "output": 1113,
+   "processed": 60519,
+   "peak_ctx": 19035,
+   "final_ctx": 19035,
+   "tools": {
+    "Read": 16,
+    "Glob": 4,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:re-implementation-standard.md": 3280,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Read:heilmeier-standard.md": 2478,
+    "Glob": 1824,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a16a1320fb4d62335",
+   "depth": 2,
+   "type": "egm:egm-comprehension",
+   "desc": "Comprehension brainstormer review",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 21829,
+   "cache_write": 18350,
+   "output": 952,
+   "processed": 41137,
+   "peak_ctx": 18352,
+   "final_ctx": 18352,
+   "tools": {
+    "Read": 16,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:comprehension.md": 9892,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:re-implementation-standard.md": 3280,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Read:heilmeier-standard.md": 2478,
+    "Glob": 1088,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8ad7b364c7f43e14",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Implementation readiness brainstormer",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 37245,
+   "cache_write": 18212,
+   "output": 1029,
+   "processed": 56494,
+   "peak_ctx": 18214,
+   "final_ctx": 18214,
+   "tools": {
+    "Read": 16,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:implementation_readiness.md": 8218,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Read:re-implementation-standard.md": 3280,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Read:heilmeier-standard.md": 2478,
+    "Glob": 1088,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae94bd641b58c8e4a",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "Structural brainstormer review",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 21673,
+   "cache_write": 14874,
+   "output": 559,
+   "processed": 37112,
+   "peak_ctx": 14876,
+   "final_ctx": 14876,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 15602,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 1591,
+    "Glob": 1088,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "afdddd7c1dfae490d",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder round 3 brainstorm",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58296,
+   "cache_write": 27032,
+   "output": 110,
+   "processed": 85442,
+   "peak_ctx": 45145,
+   "final_ctx": 45145,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a46570321bb1cfd30",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 5 zoom-out via synthesizer",
+   "calls": 9,
+   "input": 24,
+   "cache_read": 275901,
+   "cache_write": 55010,
+   "output": 4833,
+   "processed": 335768,
+   "peak_ctx": 55776,
+   "final_ctx": 55776,
+   "tools": {
+    "Read": 6,
+    "Glob": 4,
+    "Agent": 4,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 38957,
+    "Read:zoom_out.md": 10238,
+    "Read:synthesizer.md": 9278,
+    "Glob": 4770,
+    "Agent": 1946,
+    "Write": 214,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a26a766edb144fac4",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance A",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10304,
+   "cache_write": 27348,
+   "output": 507,
+   "processed": 38163,
+   "peak_ctx": 30821,
+   "final_ctx": 30821,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 77914,
+    "Read:stakeholder_log.md": 19068,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a71e6020c3a0d13c9",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance B",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10304,
+   "cache_write": 27348,
+   "output": 509,
+   "processed": 38165,
+   "peak_ctx": 30821,
+   "final_ctx": 30821,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 77914,
+    "Read:stakeholder_log.md": 19068,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a34bebd1eafbb3657",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 5 re-audit via synthesizer",
+   "calls": 8,
+   "input": 22,
+   "cache_read": 172297,
+   "cache_write": 37102,
+   "output": 3821,
+   "processed": 213242,
+   "peak_ctx": 36214,
+   "final_ctx": 36214,
+   "tools": {
+    "Read": 6,
+    "Agent": 4,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 13030,
+    "Read:synthesizer.md": 4639,
+    "Agent": 1946,
+    "Write": 217,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "afe884acd6f95df34",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance A",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 19523,
+   "cache_write": 26723,
+   "output": 614,
+   "processed": 46866,
+   "peak_ctx": 30196,
+   "final_ctx": 30196,
+   "tools": {
+    "Glob": 2,
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 73138,
+    "Read:stakeholder_log.md": 19068,
+    "Read:zoom_out.md": 10238,
+    "Read:BRIEF.md": 4442,
+    "Read:zoom-out-standard.md": 3058,
+    "Glob": 697,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af36406603ce9701d",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance B",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 19550,
+   "cache_write": 26750,
+   "output": 637,
+   "processed": 46943,
+   "peak_ctx": 30223,
+   "final_ctx": 30223,
+   "tools": {
+    "Glob": 2,
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 73138,
+    "Read:stakeholder_log.md": 19068,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a24a26ad45cd763ba",
+   "depth": 1,
+   "type": "egm:egm-comprehension",
+   "desc": "Stage 6 comprehension review",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9515,
+   "cache_write": 25154,
+   "output": 409,
+   "processed": 35082,
+   "peak_ctx": 28058,
+   "final_ctx": 28058,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 72646,
+    "Read:stakeholder_log.md": 19068,
+    "Read:comprehension.md": 9892,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "aa9fc0ce81e598696",
+   "depth": 1,
+   "type": "egm:egm-comprehension",
+   "desc": "Stage 6 comprehension re-audit",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10098,
+   "cache_write": 26010,
+   "output": 408,
+   "processed": 36520,
+   "peak_ctx": 29482,
+   "final_ctx": 29482,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 79576,
+    "Read:stakeholder_log.md": 19068,
+    "Read:comprehension.md": 9892,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a655d38fd610e7f7c",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 7 critic round 1",
+   "calls": 11,
+   "input": 32,
+   "cache_read": 274991,
+   "cache_write": 56065,
+   "output": 9849,
+   "processed": 340937,
+   "peak_ctx": 48947,
+   "final_ctx": 48947,
+   "tools": {
+    "Read": 4,
+    "Glob": 2,
+    "Grep": 4,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 13770,
+    "Read:synthesizer.md": 9278,
+    "Agent": 2919,
+    "Glob": 1394,
+    "Grep": 326,
+    "Write": 212,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ac4b2fb8faf235bc3",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "Design review txmerge",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9570,
+   "cache_write": 22416,
+   "output": 529,
+   "processed": 32519,
+   "peak_ctx": 25320,
+   "final_ctx": 25320,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 58328,
+    "Read:stakeholder_log.md": 19068,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a98a648e86d53b569",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "Structural review txmerge",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9561,
+   "cache_write": 22406,
+   "output": 527,
+   "processed": 32498,
+   "peak_ctx": 25310,
+   "final_ctx": 25310,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 57926,
+    "Read:stakeholder_log.md": 19068,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8f957d604f416cbe",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review txmerge",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9514,
+   "cache_write": 21826,
+   "output": 433,
+   "processed": 31777,
+   "peak_ctx": 24730,
+   "final_ctx": 24730,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 58328,
+    "Read:stakeholder_log.md": 19068,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ad83940fa7fa42ced",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 7 critic round 2",
+   "calls": 8,
+   "input": 22,
+   "cache_read": 110986,
+   "cache_write": 130090,
+   "output": 10330,
+   "processed": 251428,
+   "peak_ctx": 47319,
+   "final_ctx": 47319,
+   "tools": {
+    "Read": 6,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:stakeholder_log.md": 19068,
+    "Read:txmerge.md": 6150,
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Write": 215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a9ae955dc1d73d94b",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "egm-design review r2",
+   "calls": 4,
+   "input": 10,
+   "cache_read": 36605,
+   "cache_write": 41935,
+   "output": 675,
+   "processed": 79225,
+   "peak_ctx": 35194,
+   "final_ctx": 35194,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 63872,
+    "Read:stakeholder_log.md": 19068,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a853e057174115ef1",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "egm-structural review r2",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 6739,
+   "cache_write": 52987,
+   "output": 5806,
+   "processed": 65538,
+   "peak_ctx": 26521,
+   "final_ctx": 26521,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 95808,
+    "Read:stakeholder_log.md": 28602,
+    "Read:structural.md": 12429,
+    "Read:BRIEF.md": 6663,
+    "Read:feature-spec-standard.md": 4773,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a901b8701aa5eaaf4",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "egm-style review r2",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 6688,
+   "cache_write": 51669,
+   "output": 5220,
+   "processed": 63583,
+   "peak_ctx": 25862,
+   "final_ctx": 25862,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 63872,
+    "Read:stakeholder_log.md": 19068,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a71c24a487cf43f8e",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 7 critic round 3",
+   "calls": 10,
+   "input": 26,
+   "cache_read": 246167,
+   "cache_write": 42591,
+   "output": 5986,
+   "processed": 294770,
+   "peak_ctx": 42512,
+   "final_ctx": 42512,
+   "tools": {
+    "Read": 4,
+    "Glob": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 9278,
+    "Read:txmerge.md": 8776,
+    "Agent": 2919,
+    "Glob": 1394,
+    "Write": 215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af3128909cb2df5ee",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "egm-design review r3",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10162,
+   "cache_write": 23039,
+   "output": 530,
+   "processed": 33735,
+   "peak_ctx": 26511,
+   "final_ctx": 26511,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64842,
+    "Read:stakeholder_log.md": 19068,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ab4afd003e38cf3db",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "egm-structural review r3",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9590,
+   "cache_write": 23677,
+   "output": 527,
+   "processed": 33798,
+   "peak_ctx": 26581,
+   "final_ctx": 26581,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64842,
+    "Read:stakeholder_log.md": 19068,
+    "Read:structural.md": 8286,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "aa8432737801b7769",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "egm-style review r3",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9546,
+   "cache_write": 23025,
+   "output": 433,
+   "processed": 33008,
+   "peak_ctx": 25929,
+   "final_ctx": 25929,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 64842,
+    "Read:stakeholder_log.md": 19068,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ad2beaad2a97ac514",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Stakeholder round 4 question",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 58087,
+   "cache_write": 26823,
+   "output": 611,
+   "processed": 85525,
+   "peak_ctx": 44936,
+   "final_ctx": 44936,
+   "tools": {
+    "Read": 1,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:STAKEHOLDER.md": 3213,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae19ea8e924cca700",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 7 critic round 4",
+   "calls": 10,
+   "input": 30,
+   "cache_read": 246652,
+   "cache_write": 42016,
+   "output": 5853,
+   "processed": 294551,
+   "peak_ctx": 41921,
+   "final_ctx": 41921,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 12652,
+    "Read:synthesizer.md": 9278,
+    "Agent": 2919,
+    "Glob": 1394,
+    "Write": 215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a420c09c21fd45e2e",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "egm-design review r4",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10173,
+   "cache_write": 23543,
+   "output": 532,
+   "processed": 34252,
+   "peak_ctx": 27015,
+   "final_ctx": 27015,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65926,
+    "Read:stakeholder_log.md": 20754,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a8feb6b3c6990f50c",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "egm-structural review r4",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 32527,
+   "cache_write": 20447,
+   "output": 1736,
+   "processed": 54716,
+   "peak_ctx": 23917,
+   "final_ctx": 23917,
+   "tools": {
+    "Read": 6,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65926,
+    "Read:structural.md": 8286,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 272,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a24ef92317a052bc0",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "egm-style review r4",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10100,
+   "cache_write": 22942,
+   "output": 430,
+   "processed": 33476,
+   "peak_ctx": 26411,
+   "final_ctx": 26411,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65926,
+    "Read:stakeholder_log.md": 20754,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a85a295188d2cff39",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 7 critic round 5",
+   "calls": 8,
+   "input": 24,
+   "cache_read": 175360,
+   "cache_write": 40375,
+   "output": 5366,
+   "processed": 221125,
+   "peak_ctx": 38347,
+   "final_ctx": 38347,
+   "tools": {
+    "Read": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Write": 215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a1b6cc2a14b2c51a0",
+   "depth": 2,
+   "type": "egm:egm-design",
+   "desc": "egm-design review r5",
+   "calls": 3,
+   "input": 8,
+   "cache_read": 47962,
+   "cache_write": 32256,
+   "output": 10090,
+   "processed": 90316,
+   "peak_ctx": 63210,
+   "final_ctx": 63210,
+   "tools": {
+    "Read": 10,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65438,
+    "Read:stakeholder_log.md": 20754,
+    "Read:design_critic.md": 8052,
+    "Read:BRIEF.md": 4442,
+    "Read:feature-spec-standard.md": 3182,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a7fb3422452c68b2d",
+   "depth": 2,
+   "type": "egm:egm-structural",
+   "desc": "egm-structural review r5",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 56448,
+   "cache_write": 21583,
+   "output": 1998,
+   "processed": 80037,
+   "peak_ctx": 25053,
+   "final_ctx": 25053,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65840,
+    "Read:structural.md": 8286,
+    "Read:feature-spec-standard.md": 3182,
+    "Read:BRIEF.md": 2221,
+    "Glob": 292,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a808ba25621da70ae",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "egm-style review r5",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10125,
+   "cache_write": 18149,
+   "output": 219,
+   "processed": 28497,
+   "peak_ctx": 21618,
+   "final_ctx": 21618,
+   "tools": {
+    "Read": 4,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 65438,
+    "Read:style.md": 8430,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af4bc58dc5b58598f",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 8 intermediate zoom-out",
+   "calls": 8,
+   "input": 22,
+   "cache_read": 182889,
+   "cache_write": 37372,
+   "output": 4968,
+   "processed": 225251,
+   "peak_ctx": 38895,
+   "final_ctx": 38895,
+   "tools": {
+    "Read": 4,
+    "Agent": 4,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 5610,
+    "Read:synthesizer.md": 4639,
+    "Agent": 1946,
+    "Write": 227,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a7c5f33a5dac85984",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance A",
+   "calls": 2,
+   "input": 6,
+   "cache_read": 46938,
+   "cache_write": 37607,
+   "output": 5988,
+   "processed": 90539,
+   "peak_ctx": 77514,
+   "final_ctx": 77514,
+   "tools": {
+    "Read": 12,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 91512,
+    "Read:stakeholder_log.md": 20754,
+    "Read:zoom_out_report_r2.md": 15488,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ac7516b0f643f24f7",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance B",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 9937,
+   "cache_write": 34099,
+   "output": 613,
+   "processed": 44653,
+   "peak_ctx": 37003,
+   "final_ctx": 37003,
+   "tools": {
+    "Read": 12,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 91512,
+    "Read:stakeholder_log.md": 20754,
+    "Read:zoom_out_report_r2.md": 15488,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a0039cd3287afd498",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 8 zoom-out re-audit",
+   "calls": 7,
+   "input": 20,
+   "cache_read": 142529,
+   "cache_write": 35764,
+   "output": 3571,
+   "processed": 181884,
+   "peak_ctx": 34298,
+   "final_ctx": 34298,
+   "tools": {
+    "Read": 2,
+    "Agent": 4,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 4639,
+    "Agent": 1946,
+    "Write": 230,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "aa3c0c1cec09124ef",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance A",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 45661,
+   "cache_write": 33769,
+   "output": 5490,
+   "processed": 84926,
+   "peak_ctx": 37242,
+   "final_ctx": 37242,
+   "tools": {
+    "Glob": 2,
+    "Read": 12,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 90130,
+    "Read:stakeholder_log.md": 20754,
+    "Read:zoom_out_report_r2.md": 15488,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:zoom_out.md": 5119,
+    "Read:BRIEF.md": 4442,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "afeb010568a25bc4c",
+   "depth": 2,
+   "type": "egm:egm-zoom-out",
+   "desc": "Zoom-out review instance B",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 18751,
+   "cache_write": 33753,
+   "output": 720,
+   "processed": 53230,
+   "peak_ctx": 37226,
+   "final_ctx": 37226,
+   "tools": {
+    "Glob": 2,
+    "Read": 12,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 90130,
+    "Read:stakeholder_log.md": 20754,
+    "Read:zoom_out_report_r2.md": 15488,
+    "Read:zoom_out.md": 10238,
+    "Read:zoom-out-standard.md": 6116,
+    "Read:BRIEF.md": 4442,
+    "Glob": 697,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "adab3243c83ae468e",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 9 readiness round 1",
+   "calls": 10,
+   "input": 32,
+   "cache_read": 313095,
+   "cache_write": 57285,
+   "output": 9327,
+   "processed": 379739,
+   "peak_ctx": 60864,
+   "final_ctx": 54565,
+   "tools": {
+    "Read": 4,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 12189,
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Write": 230,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a04d76bea5a42c42a",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Readiness review txmerge plan",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 18484,
+   "cache_write": 29925,
+   "output": 616,
+   "processed": 49031,
+   "peak_ctx": 32829,
+   "final_ctx": 32829,
+   "tools": {
+    "Glob": 2,
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 90130,
+    "Read:stakeholder_log.md": 20754,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af86e1cd391de8f28",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details review txmerge",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 28673,
+   "cache_write": 30242,
+   "output": 617,
+   "processed": 59540,
+   "peak_ctx": 33146,
+   "final_ctx": 33146,
+   "tools": {
+    "Glob": 2,
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 90130,
+    "Read:stakeholder_log.md": 20754,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Glob": 697,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ae0ebde6a97e4e827",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review txmerge plan",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 50720,
+   "cache_write": 33888,
+   "output": 6896,
+   "processed": 91512,
+   "peak_ctx": 36792,
+   "final_ctx": 36792,
+   "tools": {
+    "Read": 8,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 90130,
+    "Read:stakeholder_log.md": 20754,
+    "Glob": 17826,
+    "Read:BRIEF.md": 4442,
+    "Read:style.md": 4215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a59fed805fbd33427",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 9 readiness round 2",
+   "calls": 9,
+   "input": 28,
+   "cache_read": 211058,
+   "cache_write": 41639,
+   "output": 5903,
+   "processed": 258628,
+   "peak_ctx": 41101,
+   "final_ctx": 41101,
+   "tools": {
+    "Read": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Write": 233,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a78a12d6e4d5e028a",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Implementation readiness review r2",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 15586,
+   "cache_write": 34049,
+   "output": 616,
+   "processed": 50257,
+   "peak_ctx": 34051,
+   "final_ctx": 34051,
+   "tools": {
+    "Glob": 2,
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 95958,
+    "Read:stakeholder_log.md": 20754,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "Glob": 1394,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a5924c117b2300acc",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details review r2",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 35860,
+   "cache_write": 40599,
+   "output": 7337,
+   "processed": 83802,
+   "peak_ctx": 40601,
+   "final_ctx": 40601,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 95958,
+    "Read:stakeholder_log.md": 20754,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a382be8233d7d4ad0",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review r2",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 6619,
+   "cache_write": 32772,
+   "output": 406,
+   "processed": 39801,
+   "peak_ctx": 32774,
+   "final_ctx": 32774,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 95958,
+    "Read:stakeholder_log.md": 20754,
+    "Read:style.md": 8430,
+    "Read:BRIEF.md": 4442,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a7bac43eb37aa889b",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 9 readiness round 3",
+   "calls": 9,
+   "input": 28,
+   "cache_read": 215572,
+   "cache_write": 42711,
+   "output": 6792,
+   "processed": 265103,
+   "peak_ctx": 42137,
+   "final_ctx": 42137,
+   "tools": {
+    "Read": 2,
+    "Glob": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 9278,
+    "Agent": 2919,
+    "Glob": 1394,
+    "Write": 233,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "abc561f64dbe73118",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Implementation readiness review r3",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10248,
+   "cache_write": 30763,
+   "output": 510,
+   "processed": 41525,
+   "peak_ctx": 34238,
+   "final_ctx": 34238,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 99688,
+    "Read:stakeholder_log.md": 20754,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a6b395e4868b0fded",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details review r3",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 40140,
+   "cache_write": 40474,
+   "output": 9895,
+   "processed": 90515,
+   "peak_ctx": 43947,
+   "final_ctx": 43947,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 99688,
+    "Read:stakeholder_log.md": 20754,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a4d01dc2c4427c94c",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review r3",
+   "calls": 3,
+   "input": 6,
+   "cache_read": 18660,
+   "cache_write": 30638,
+   "output": 411,
+   "processed": 49715,
+   "peak_ctx": 33542,
+   "final_ctx": 33542,
+   "tools": {
+    "Read": 8,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 99688,
+    "Read:stakeholder_log.md": 20754,
+    "Read:BRIEF.md": 4442,
+    "Read:style.md": 4215,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a5ef29f9997c3b6a0",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 9 readiness round 4",
+   "calls": 9,
+   "input": 28,
+   "cache_read": 208474,
+   "cache_write": 39640,
+   "output": 5854,
+   "processed": 253996,
+   "peak_ctx": 39725,
+   "final_ctx": 39725,
+   "tools": {
+    "Read": 2,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Write": 233,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a2f628efcc056e39d",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Implementation readiness review r4",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10293,
+   "cache_write": 30939,
+   "output": 510,
+   "processed": 41746,
+   "peak_ctx": 34414,
+   "final_ctx": 34414,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 100164,
+    "Read:stakeholder_log.md": 20754,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a3640051a84aa6f3f",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details review r4",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10334,
+   "cache_write": 31245,
+   "output": 513,
+   "processed": 42096,
+   "peak_ctx": 34718,
+   "final_ctx": 34718,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 100164,
+    "Read:stakeholder_log.md": 20754,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "ab6a656543ac3f7bc",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review r4",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 41419,
+   "cache_write": 36625,
+   "output": 658,
+   "processed": 78710,
+   "peak_ctx": 39529,
+   "final_ctx": 39529,
+   "tools": {
+    "Read": 12,
+    "Glob": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 100172,
+    "Read:stakeholder_log.md": 20754,
+    "Glob": 16434,
+    "Read:BRIEF.md": 4442,
+    "Read:style.md": 4215,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a5b215c24f3de4e32",
+   "depth": 1,
+   "type": "egm:egm-synthesizer",
+   "desc": "Stage 9 readiness round 5",
+   "calls": 10,
+   "input": 30,
+   "cache_read": 245514,
+   "cache_write": 41752,
+   "output": 6426,
+   "processed": 293722,
+   "peak_ctx": 41144,
+   "final_ctx": 41144,
+   "tools": {
+    "Read": 6,
+    "Agent": 6,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:synthesizer.md": 4639,
+    "Agent": 2919,
+    "Read:txmerge.md": 2886,
+    "Write": 233,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a37c08f3e0030417d",
+   "depth": 2,
+   "type": "egm:egm-implementation-readiness",
+   "desc": "Implementation readiness review r5",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10305,
+   "cache_write": 31265,
+   "output": 512,
+   "processed": 42086,
+   "peak_ctx": 34740,
+   "final_ctx": 34740,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 101758,
+    "Read:stakeholder_log.md": 20754,
+    "Read:implementation_readiness.md": 8218,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a415eb784fd96f7bb",
+   "depth": 2,
+   "type": "egm:egm-codebase-details",
+   "desc": "Codebase details review r5",
+   "calls": 2,
+   "input": 4,
+   "cache_read": 10328,
+   "cache_write": 31553,
+   "output": 510,
+   "processed": 42395,
+   "peak_ctx": 35026,
+   "final_ctx": 35026,
+   "tools": {
+    "Read": 10,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 101758,
+    "Read:stakeholder_log.md": 20754,
+    "Read:codebase_details.md": 9756,
+    "Read:BRIEF.md": 4442,
+    "Read:implementation-readiness-standard.md": 2950,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "a14d2083a49c18425",
+   "depth": 2,
+   "type": "egm:egm-style",
+   "desc": "Style review r5",
+   "calls": 4,
+   "input": 8,
+   "cache_read": 42244,
+   "cache_write": 22609,
+   "output": 2400,
+   "processed": 67261,
+   "peak_ctx": 26078,
+   "final_ctx": 26078,
+   "tools": {
+    "Read": 8,
+    "Grep": 2,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 42662,
+    "Read:stakeholder_log.md": 20754,
+    "Read:BRIEF.md": 4442,
+    "Read:style.md": 4215,
+    "Grep": 2948,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  },
+  {
+   "id": "af127ad9a72880f23",
+   "depth": 1,
+   "type": "general-purpose",
+   "desc": "Implement txmerge design",
+   "calls": 13,
+   "input": 26,
+   "cache_read": 863331,
+   "cache_write": 74395,
+   "output": 15953,
+   "processed": 953705,
+   "peak_ctx": 95297,
+   "final_ctx": 95297,
+   "tools": {
+    "Bash": 16,
+    "Read": 1,
+    "Write": 15,
+    "SubagentHandback": 1
+   },
+   "tool_chars": {
+    "Read:txmerge.md": 50997,
+    "Bash": 7623,
+    "Write": 2999,
+    "SubagentHandback": 61
+   },
+   "model": "claude-opus-5-5"
+  }
+ ]
+}

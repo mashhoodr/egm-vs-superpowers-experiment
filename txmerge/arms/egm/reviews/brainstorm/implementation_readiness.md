@@ -1,0 +1,6 @@
+# Brainstorm Goldfish: egm-implementation-readiness (summary of raw report)
+Blocker: (1) dedup survivor rule — keep rows from export i only beyond count kept from earlier exports; each keeps own text and position; "export" = each --account instance; allow mixed formats per NAME.
+Major: (2) amount regex grammar, >2dp malformed, no -0.00; (3) header exact/case-sensitive after BOM+strip; empty file exit 2; header-only valid; (4) wrong field count malformed; blank lines silent; line number; (5) utf-8-sig, decode failure exit 2, no fallback; (6) output bytes + temp+os.replace, existing --out unchanged on exit 2; (7) --account split first '=', empty side exit 2, NAME case-sensitive; required args; (8) pipeline order; (9) rules: trim, casefold, blank pattern/category warn+skip, field count, 'Transfer' category allowed.
+Nits: (10) accept single-digit d/m, 31/02 malformed; (11) normalisation expression; (12) warning/summary format; tests check file+line only; (13) T10000; (14) codepoint sort; (15) known limitation: greedy rule may link unrelated equal amounts.
+Migration: (A) atomic write; (B) transfer_ids stable only for identical inputs; (C) golden-file test locks output bytes.
+Testing strategy: e2e subprocess golden files, determinism double run, exit-2 matrix, dedup/transfer/malformed/quirk/rules cases, unit tests, max-count property check.

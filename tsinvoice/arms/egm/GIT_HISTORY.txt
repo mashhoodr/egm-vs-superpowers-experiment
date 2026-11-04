@@ -1,0 +1,239 @@
+commit 90047aa8014e679ed1fc02698b9c20996657a5e5
+Date: Tue Nov 3 11:48:39 2026 +0500
+
+    Brainstorm: brief, stakeholder round 1, process log
+
+
+ BRIEF.md           | 48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md     |  4 ++++
+ stakeholder_log.md | 49 +++++++++++++++++++++++++++++++++++++++++++++++++
+ 3 files changed, 101 insertions(+)
+commit bed62e8857b8f431cd10d4e975f880b5c4b1baab
+Date: Tue Nov 3 11:50:03 2026 +0500
+
+    Brainstorm: stakeholder round 2
+
+
+ process_log.md     |  2 ++
+ stakeholder_log.md | 35 +++++++++++++++++++++++++++++++++++
+ 2 files changed, 37 insertions(+)
+commit 1f940da7b86855a1f889eb29f9e0d85852bc69de
+Date: Tue Nov 3 11:57:18 2026 +0500
+
+    Brainstorm: concepts_brief with resolved decisions
+
+
+ concepts_brief.md  | 219 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md     |   4 +
+ stakeholder_log.md |  34 +++++++++
+ 3 files changed, 257 insertions(+)
+commit fdb3197c771052db2a0536553642fe75842d99f2
+Date: Tue Nov 3 12:00:10 2026 +0500
+
+    Draft: design_draft.md all sections
+
+
+ design_draft.md | 717 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md  |   3 +
+ 2 files changed, 720 insertions(+)
+commit b6f480476ec87c5b2f2931a261e6350a2a3ddfa5
+Date: Tue Nov 3 12:00:23 2026 +0500
+
+    Finalize draft to docs/designs/tsinvoice.md
+
+
+ docs/designs/tsinvoice.md | 717 ++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md            |   2 +
+ 2 files changed, 719 insertions(+)
+commit 8be9a840c4a00a16e59b07c053959a8cf1375b70
+Date: Tue Nov 3 12:02:30 2026 +0500
+
+    Review: setup decisions
+
+
+ process_log.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+commit 1458c7cca3f579ae652abd908dbe7ec7eb019f8d
+Date: Tue Nov 3 12:05:25 2026 +0500
+
+    Review stage 5: zoom-out findings resolved
+
+
+ docs/designs/tsinvoice.md        | 66 ++++++++++++++++++++----------
+ goldfish_review_report_stage5.md | 53 ++++++++++++++++++++++++
+ process_log.md                   |  2 +
+ zoom_out_report.md               | 88 ++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 187 insertions(+), 22 deletions(-)
+commit fc042d05bfe533dfc00d8a5a69304aacd6721727
+Date: Tue Nov 3 12:05:32 2026 +0500
+
+    Stage 5: warnings after write
+
+
+ docs/designs/tsinvoice.md | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+commit ba9eb11c20d64952d859e78afe3a8743df6d9a2e
+Date: Tue Nov 3 12:08:26 2026 +0500
+
+    Review stage 5 re-audit resolved
+
+
+ docs/designs/tsinvoice.md           |  9 ++--
+ goldfish_review_report_stage5_r2.md | 18 ++++++++
+ process_log.md                      |  1 +
+ zoom_out_report_r2.md               | 82 +++++++++++++++++++++++++++++++++++++
+ 4 files changed, 107 insertions(+), 3 deletions(-)
+commit 2adeeb2bc0cdd0f25793128fef5a7f4afdc1233f
+Date: Tue Nov 3 12:11:03 2026 +0500
+
+    Review stage 6: comprehension findings resolved
+
+
+ comprehension_report.md          | 70 ++++++++++++++++++++++++++++++++++++++++
+ docs/designs/tsinvoice.md        | 65 ++++++++++++++++++++++++-------------
+ goldfish_review_report_stage6.md | 17 ++++++++++
+ process_log.md                   |  1 +
+ 4 files changed, 131 insertions(+), 22 deletions(-)
+commit 26b369f829bfdad4293c5ec791063d558017c91a
+Date: Tue Nov 3 12:13:35 2026 +0500
+
+    Review stage 6 re-audit resolved
+
+
+ comprehension_report_r2.md          | 24 ++++++++++++++++
+ docs/designs/tsinvoice.md           | 56 +++++++++++++++++++++++++++----------
+ goldfish_review_report_stage6_r2.md | 18 ++++++++++++
+ process_log.md                      |  1 +
+ 4 files changed, 85 insertions(+), 14 deletions(-)
+commit 0c469d8e1a65ac6e87680df4f03c737fcbf4fbf2
+Date: Tue Nov 3 12:21:10 2026 +0500
+
+    Review stage 7 round 1 resolved
+
+
+ critic_report.md                 | 244 +++++++++++++++++++++++++++++++++++++++
+ docs/designs/tsinvoice.md        | 228 +++++++++++++++++++++++-------------
+ goldfish_review_report_stage7.md |  42 +++++++
+ process_log.md                   |   1 +
+ 4 files changed, 437 insertions(+), 78 deletions(-)
+commit 64b9d4cabbde62c49f699b58af82ae900dee9050
+Date: Tue Nov 3 12:28:43 2026 +0500
+
+    Review stage 7 round 2 resolved
+
+
+ critic_report_r2.md                 | 297 ++++++++++++++++++++++++++++++++++++
+ docs/designs/tsinvoice.md           | 125 +++++++++------
+ goldfish_review_report_stage7_r2.md |  25 +++
+ process_log.md                      |   1 +
+ 4 files changed, 398 insertions(+), 50 deletions(-)
+commit 01ff35a370f6c17309c4be67ccc65a151267c6c1
+Date: Tue Nov 3 12:35:25 2026 +0500
+
+    Review stage 8 resolved
+
+
+ docs/designs/tsinvoice.md        | 237 +++++++++++++--------------------------
+ goldfish_review_report_stage8.md |  19 ++++
+ intermediate_zoom_out_report.md  | 189 +++++++++++++++++++++++++++++++
+ process_log.md                   |   1 +
+ 4 files changed, 289 insertions(+), 157 deletions(-)
+commit 66d036be01334faab5df4847c8afc3c7741a094d
+Date: Tue Nov 3 12:39:42 2026 +0500
+
+    Review stage 8 re-audit resolved
+
+
+ docs/designs/tsinvoice.md           | 33 +++++++++++-------
+ goldfish_review_report_stage8_r2.md | 17 ++++++++++
+ intermediate_zoom_out_report_r2.md  | 68 +++++++++++++++++++++++++++++++++++++
+ process_log.md                      |  1 +
+ 4 files changed, 107 insertions(+), 12 deletions(-)
+commit ee952005715ce76402f5b65d8cd138a93072d5a7
+Date: Tue Nov 3 12:40:26 2026 +0500
+
+    Stage 8: unterminated quote per owner R4.1
+
+
+ docs/designs/tsinvoice.md           | 39 ++++++++++++++++++++-----------------
+ goldfish_review_report_stage8_r2.md |  2 ++
+ process_log.md                      |  1 +
+ stakeholder_log.md                  |  8 ++++++++
+ 4 files changed, 32 insertions(+), 18 deletions(-)
+commit 0ee38cec29f20615cc37a51d00ce1a9158212453
+Date: Tue Nov 3 12:47:56 2026 +0500
+
+    Review stage 9 round 1 resolved
+
+
+ docs/designs/tsinvoice.md          | 172 +++++++++++++++++++---------
+ goldfish_review_report_stage9.md   |  36 ++++++
+ implementation_readiness_report.md | 228 +++++++++++++++++++++++++++++++++++++
+ process_log.md                     |   1 +
+ 4 files changed, 386 insertions(+), 51 deletions(-)
+commit 7b8496eceee9197b1b89a67536e0614a0c93853f
+Date: Tue Nov 3 12:55:21 2026 +0500
+
+    Review stage 9 re-audit resolved; design approved
+
+
+ docs/designs/tsinvoice.md             |  95 ++++++++++++++++---------
+ goldfish_review_report_stage9_r2.md   |  25 +++++++
+ implementation_readiness_report_r2.md | 127 ++++++++++++++++++++++++++++++++++
+ process_log.md                        |   2 +
+ 4 files changed, 215 insertions(+), 34 deletions(-)
+commit ef07662717542d2d15d47fa4f0c759ad202771e4
+Date: Tue Nov 3 12:55:36 2026 +0500
+
+    Consolidated review report
+
+
+ consolidated_review_report.md | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+commit 4d835c46ce55375608b6d60096e7a2c287a07d83
+Date: Tue Nov 3 13:00:16 2026 +0500
+
+    Implement tsinvoice per approved design
+Readers (Format A/B, rates, sentinel-based unterminated-quote detection),
+pure merge core (dedupe, join, price, sort, session IDs, overlap check),
+atomic writer and argparse CLI, with pytest suite and README.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ .gitignore            |   3 +
+ README.md             |  55 ++++++++
+ pyproject.toml        |  10 ++
+ tests/__init__.py     |   0
+ tests/conftest.py     |  52 ++++++++
+ tests/helpers.py      |  18 +++
+ tests/test_cli.py     | 258 ++++++++++++++++++++++++++++++++++++++
+ tests/test_core.py    | 295 +++++++++++++++++++++++++++++++++++++++++++
+ tests/test_model.py   |  27 ++++
+ tests/test_readers.py | 339 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ tsinvoice/__init__.py |   3 +
+ tsinvoice/__main__.py |   3 +
+ tsinvoice/cli.py      |  59 +++++++++
+ tsinvoice/core.py     | 146 ++++++++++++++++++++++
+ tsinvoice/model.py    |  83 ++++++++++++
+ tsinvoice/readers.py  | 210 +++++++++++++++++++++++++++++++
+ tsinvoice/writer.py   |  35 ++++++
+ 17 files changed, 1596 insertions(+)
+commit 2f6bf245596ce8db2a0d690988a7b7eaa2d35dd2
+Date: Tue Nov 3 13:02:29 2026 +0500
+
+    Treat over-long duration digits as invalid duration_minutes
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ tests/test_readers.py | 2 +-
+ tsinvoice/readers.py  | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+commit b78d8bad93db617ad7c62dea2f1bee20ffff77fd
+Date: Tue Nov 3 13:03:18 2026 +0500
+
+    Process log: implementation verified
+
+
+ process_log.md | 4 ++++
+ 1 file changed, 4 insertions(+)

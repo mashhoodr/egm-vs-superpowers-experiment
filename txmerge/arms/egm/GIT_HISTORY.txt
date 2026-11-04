@@ -1,0 +1,254 @@
+commit a8a91bf6ebcaa4ea726fc2d3fc6b2d84334c88e1
+Date: Mon Nov 2 14:03:04 2026 +0500
+
+    chore: add brief
+
+
+ BRIEF.md | 46 ++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+commit 3ad52cde9a982329389667f66dfe41664e0639ab
+Date: Mon Nov 2 14:05:44 2026 +0500
+
+    docs: stakeholder log and process log (brainstorm clarification)
+
+
+ process_log.md     | 13 +++++++++
+ stakeholder_log.md | 77 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 90 insertions(+)
+commit d45db85ae0f07272d427edd3df83c87e8ee804b1
+Date: Mon Nov 2 14:10:02 2026 +0500
+
+    docs: concepts brief from egm-brainstorm
+
+
+ concepts_brief.md                              | 107 +++++++++++++++++++++++++
+ process_log.md                                 |   4 +
+ reviews/brainstorm/codebase_details.md         |   4 +
+ reviews/brainstorm/comprehension.md            |   4 +
+ reviews/brainstorm/design_critic.md            |   5 ++
+ reviews/brainstorm/implementation_readiness.md |   6 ++
+ reviews/brainstorm/structural.md               |   4 +
+ reviews/brainstorm/zoom_out.md                 |  10 +++
+ stakeholder_log.md                             |  23 ++++++
+ working_hypothesis.md                          |  31 +++++++
+ 10 files changed, 198 insertions(+)
+commit 8bfe97beeb64f7f10a258007d79f037568d16da5
+Date: Mon Nov 2 14:12:37 2026 +0500
+
+    docs: design draft for txmerge (egm-draft)
+
+
+ design_draft.md         | 415 ++++++++++++++++++++++++++++++++++++++++++++++++
+ docs/designs/txmerge.md | 415 ++++++++++++++++++++++++++++++++++++++++++++++++
+ process_log.md          |  11 ++
+ 3 files changed, 841 insertions(+)
+commit bcf97775e5042eb97af85904b894180d08d4402a
+Date: Mon Nov 2 14:15:03 2026 +0500
+
+    docs: stage 5 zoom-out report and nit fixes
+
+
+ docs/designs/txmerge.md | 18 +++++++++---------
+ process_log.md          |  7 +++++++
+ zoom_out_report.md      | 16 ++++++++++++++++
+ 3 files changed, 32 insertions(+), 9 deletions(-)
+commit cb9e91f8d47ec6243e05ad190496ebe595be2c77
+Date: Mon Nov 2 14:16:47 2026 +0500
+
+    docs: stage 6 comprehension report and fixes
+
+
+ comprehension_report.md | 26 ++++++++++++++++++++++++++
+ docs/designs/txmerge.md | 24 ++++++++++++++----------
+ process_log.md          |  1 +
+ 3 files changed, 41 insertions(+), 10 deletions(-)
+commit 90e40e9421ce1ef55fb5137db7bf03a42200e1d7
+Date: Mon Nov 2 14:19:39 2026 +0500
+
+    docs: stage 6 re-audit fixes
+
+
+ comprehension_report.md | 12 ++++++++++++
+ docs/designs/txmerge.md | 22 +++++++++++++++-------
+ process_log.md          |  1 +
+ 3 files changed, 28 insertions(+), 7 deletions(-)
+commit a0af551d19bf20bcfb3e0e710bd1e749e1029c25
+Date: Mon Nov 2 14:25:04 2026 +0500
+
+    docs: stage 7 round 1 resolution
+
+
+ docs/designs/txmerge.md         | 180 ++++++++++++++++++++++++----------------
+ goldfish_review_report.md       |  27 ++++++
+ process_log.md                  |   1 +
+ reviews/stage7/r1_design.md     |   6 ++
+ reviews/stage7/r1_structural.md |   4 +
+ reviews/stage7/r1_style.md      |   6 ++
+ stakeholder_log.md              |  13 +++
+ 7 files changed, 164 insertions(+), 73 deletions(-)
+commit 52c1932eb31316d7089279f0b5e2c28cf277ce7b
+Date: Mon Nov 2 14:27:47 2026 +0500
+
+    docs: stage 7 round 2 resolution
+
+
+ docs/designs/txmerge.md         | 59 +++++++++++++++++++++++------------------
+ goldfish_review_report.md       | 17 ++++++++++++
+ process_log.md                  |  1 +
+ reviews/stage7/r2_design.md     |  3 +++
+ reviews/stage7/r2_structural.md |  2 ++
+ reviews/stage7/r2_style.md      |  5 ++++
+ 6 files changed, 61 insertions(+), 26 deletions(-)
+commit 9a0d97d4d5cddb2f3ff08fef3f927380772d5c5d
+Date: Mon Nov 2 14:30:14 2026 +0500
+
+    docs: stage 7 round 3 resolution
+
+
+ docs/designs/txmerge.md         | 51 ++++++++++++++++++++++-------------------
+ goldfish_review_report.md       | 16 +++++++++++++
+ process_log.md                  |  1 +
+ reviews/stage7/r3_design.md     |  3 +++
+ reviews/stage7/r3_structural.md |  2 ++
+ reviews/stage7/r3_style.md      |  4 ++++
+ 6 files changed, 54 insertions(+), 23 deletions(-)
+commit 9c3256bd170631a59aad03e777e4b3b12dbd7169
+Date: Mon Nov 2 14:32:42 2026 +0500
+
+    docs: stage 7 round 4 resolution
+
+
+ docs/designs/txmerge.md         | 42 +++++++++++++++++++++++------------------
+ goldfish_review_report.md       | 14 ++++++++++++++
+ process_log.md                  |  1 +
+ reviews/stage7/r4_design.md     |  2 ++
+ reviews/stage7/r4_structural.md |  2 ++
+ reviews/stage7/r4_style.md      |  3 +++
+ 6 files changed, 46 insertions(+), 18 deletions(-)
+commit 13c658042b08a5fe04965d0308f9aa40456ffeab
+Date: Mon Nov 2 14:37:15 2026 +0500
+
+    docs: stage 7 round 5 resolution; accept at cap
+
+
+ docs/designs/txmerge.md         | 58 ++++++++++++++++++++++++-----------------
+ goldfish_review_report.md       | 19 ++++++++++++++
+ process_log.md                  |  1 +
+ reviews/stage7/r5_design.md     |  2 ++
+ reviews/stage7/r5_structural.md |  2 ++
+ reviews/stage7/r5_style.md      |  5 ++++
+ 6 files changed, 63 insertions(+), 24 deletions(-)
+commit e2b7bb411b89c7c2fc8659d21944f0c1094b6fa0
+Date: Mon Nov 2 14:40:07 2026 +0500
+
+    docs: stage 8 intermediate zoom-out and simplification
+
+
+ docs/designs/txmerge.md         | 46 ++++++++++++++++-------------------------
+ intermediate_zoom_out_report.md | 15 ++++++++++++++
+ process_log.md                  |  1 +
+ 3 files changed, 34 insertions(+), 28 deletions(-)
+commit 57dc34db1a18fa550aba2d6ef8f584f4661fe640
+Date: Mon Nov 2 14:46:12 2026 +0500
+
+    docs: stage 9 round 1 resolution (implementation plan rewrite)
+
+
+ docs/designs/txmerge.md                       | 188 +++++++++++++++++++-------
+ goldfish_review_report.md                     |  23 ++++
+ process_log.md                                |   1 +
+ reviews/stage9/r1_codebase_details.md         |   3 +
+ reviews/stage9/r1_implementation_readiness.md |   3 +
+ reviews/stage9/r1_style.md                    |   3 +
+ 6 files changed, 174 insertions(+), 47 deletions(-)
+commit 9639a9c72f64053272aa0cac580bef0d79446c57
+Date: Mon Nov 2 14:53:05 2026 +0500
+
+    docs: stage 9 round 2 resolution
+
+
+ docs/designs/txmerge.md                       | 58 ++++++++++++++-------------
+ goldfish_review_report.md                     | 16 ++++++++
+ process_log.md                                |  1 +
+ reviews/stage9/r2_codebase_details.md         |  4 ++
+ reviews/stage9/r2_implementation_readiness.md |  4 ++
+ reviews/stage9/r2_style.md                    |  3 ++
+ 6 files changed, 58 insertions(+), 28 deletions(-)
+commit 640baa65b1bd8611b3222517d9e8ebda4dd6bcbd
+Date: Mon Nov 2 14:59:56 2026 +0500
+
+    docs: stage 9 round 3 resolution
+
+
+ docs/designs/txmerge.md                       | 60 +++++++++++++++------------
+ goldfish_review_report.md                     | 16 +++++++
+ process_log.md                                |  1 +
+ reviews/stage9/r3_codebase_details.md         |  4 ++
+ reviews/stage9/r3_implementation_readiness.md |  3 ++
+ reviews/stage9/r3_style.md                    |  3 ++
+ 6 files changed, 60 insertions(+), 27 deletions(-)
+commit 7ee4aee477d726e5bb77a7e8acc9b48f86fd6b4e
+Date: Mon Nov 2 15:05:18 2026 +0500
+
+    docs: stage 9 round 4 resolution
+
+
+ docs/designs/txmerge.md                       | 34 +++++++++++++--------------
+ goldfish_review_report.md                     | 16 +++++++++++++
+ process_log.md                                |  1 +
+ reviews/stage9/r4_codebase_details.md         |  3 +++
+ reviews/stage9/r4_implementation_readiness.md |  3 +++
+ reviews/stage9/r4_style.md                    |  3 +++
+ 6 files changed, 43 insertions(+), 17 deletions(-)
+commit 4072d3c43cc639967c0ffeb4e985dddef70d2753
+Date: Mon Nov 2 15:09:48 2026 +0500
+
+    docs: finalize design (approved) and review reports
+
+
+ critic_report.md                              | 13 +++++++++++++
+ docs/designs/txmerge.md                       | 22 +++++++++++-----------
+ goldfish_review_report.md                     | 12 ++++++++++++
+ implementation_readiness_report.md            | 13 +++++++++++++
+ process_log.md                                |  6 ++++++
+ reviews/stage9/r5_codebase_details.md         |  2 ++
+ reviews/stage9/r5_implementation_readiness.md |  2 ++
+ reviews/stage9/r5_style.md                    |  2 ++
+ 8 files changed, 61 insertions(+), 11 deletions(-)
+commit c6ffc6d324f5c8b008cc5bf83ca15df952698d42
+Date: Mon Nov 2 15:12:39 2026 +0500
+
+    feat: implement txmerge per approved design
+Package txmerge/ (CLI, format detection/parsing, max-count dedup,
+greedy transfer pairing, rules categorisation, atomic ledger write)
+plus pytest suite covering parsing, rules, dedup, transfers and CLI.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+
+
+ pyproject.toml          |  12 +++
+ tests/conftest.py       |  43 ++++++++
+ tests/test_cli.py       | 282 ++++++++++++++++++++++++++++++++++++++++++++++++
+ tests/test_dedup.py     |  63 +++++++++++
+ tests/test_parsing.py   | 208 +++++++++++++++++++++++++++++++++++
+ tests/test_rules.py     |  91 ++++++++++++++++
+ tests/test_transfers.py |  96 +++++++++++++++++
+ txmerge/__init__.py     |   1 +
+ txmerge/__main__.py     |   5 +
+ txmerge/cli.py          |  74 +++++++++++++
+ txmerge/csvio.py        |  36 +++++++
+ txmerge/dedup.py        |  26 +++++
+ txmerge/formats.py      | 135 +++++++++++++++++++++++
+ txmerge/ledger.py       |  60 +++++++++++
+ txmerge/model.py        |  48 +++++++++
+ txmerge/rules.py        |  38 +++++++
+ txmerge/transfers.py    |  36 +++++++
+ 17 files changed, 1254 insertions(+)
+commit 61ad7a2653ebac14cb3ef89185084319714e694b
+Date: Mon Nov 2 15:13:25 2026 +0500
+
+    docs: process log — verification and token accounting
+
+
+ process_log.md | 11 +++++++++++
+ 1 file changed, 11 insertions(+)

@@ -1,0 +1,20 @@
+
+=== baseline  wall 4.8 min  processed 0.85M  cost-units 0.21M
+  orchestrator                               n= 1  processed   0.76M ( 90%)  cost  81%  agent-min   4.8
+  stakeholder                                n= 1  processed   0.09M ( 10%)  cost  19%  agent-min   0.4
+
+=== superpowers  wall 27.9 min  processed 17.61M  cost-units 3.07M
+  orchestrator                               n= 1  processed  12.95M ( 74%)  cost  51%  agent-min  27.9
+  stakeholder                                n= 7  processed   0.60M (  3%)  cost   9%  agent-min   1.1
+  task implementers                          n= 6  processed   2.10M ( 12%)  cost  17%  agent-min   3.2
+  per-task reviewers                         n= 6  processed   0.63M (  4%)  cost  12%  agent-min   2.6
+  final review + fix + re-review             n= 3  processed   1.33M (  8%)  cost  11%  agent-min   4.7
+
+=== egm  wall 71.1 min  processed 47.52M  cost-units 7.64M
+  orchestrator                               n= 1  processed  44.39M ( 93%)  cost  69%  agent-min  71.1
+  stakeholder                                n= 4  processed   0.34M (  1%)  cost   2%  agent-min   0.9
+  brainstorm lenses                          n= 6  processed   0.13M (  0%)  cost   2%  agent-min   8.6
+  stage 7 (design/structure/style x5)        n=15  processed   0.71M (  1%)  cost   9%  agent-min  19.3
+  stages 5,6,8                               n= 4  processed   0.31M (  1%)  cost   3%  agent-min   6.2
+  stage 9 (readiness/codebase/style x5)      n=15  processed   0.79M (  2%)  cost  13%  agent-min  44.2
+  implementer                                n= 1  processed   0.84M (  2%)  cost   3%  agent-min   3.0
